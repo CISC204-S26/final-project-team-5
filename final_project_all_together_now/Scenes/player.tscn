@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cebdd2bjchkkl"]
+
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="2_6t5aa"]
+
+[node name="Node2D" type="Node2D" unique_id=632507773]
+
+[node name="bob" type="Sprite2D" parent="." unique_id=1282690882]
+position = Vector2(544, 349)
+texture = ExtResource("1_cvnsp")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=61709763]
+position = Vector2(960, 540)
+texture = ExtResource("2_6t5aa")
