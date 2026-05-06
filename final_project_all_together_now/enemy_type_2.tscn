@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://50bujvpp72k3"]
+
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_40j3f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w4np1"]
+radius = 200.04
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ikp6"]
+size = Vector2(120, 129)
+
+[node name="Enemy_Type_2" type="CharacterBody2D" unique_id=1489634163]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1506079007]
+self_modulate = Color(1, 0, 1, 1)
+texture = ExtResource("1_40j3f")
+
+[node name="Sight" type="Area2D" parent="." unique_id=1094871927]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1854558813]
+shape = SubResource("CircleShape2D_w4np1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=559363499]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3ikp6")
+debug_color = Color(0.35112584, 0.61693203, 0.16516039, 0.41960785)

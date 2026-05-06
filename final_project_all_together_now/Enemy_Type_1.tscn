@@ -1,5 +1,32 @@
 [gd_scene format=3 uid="uid://tb5au4cqn1c6"]
 
-[node name="Node2D" type="Node2D" unique_id=808620052]
+[ext_resource type="Script" uid="uid://3n7rkl2gq2jv" path="res://enemy_type_1.gd" id="1_13dix"]
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_iu0l3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13dix"]
+radius = 208.19463
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu0l3"]
+size = Vector2(128, 131)
+
+[node name="Enemy_Type_1" type="Node2D" unique_id=808620052]
+script = ExtResource("1_13dix")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=438564076]
+self_modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_iu0l3")
+
+[node name="DetectionRadius" type="Area2D" parent="." unique_id=1923622007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius" unique_id=1303905868]
+shape = SubResource("CircleShape2D_13dix")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1315343757]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1859919351]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_iu0l3")
+debug_color = Color(0.5459287, 0.2163502, 0.032310653, 0.41960785)
+
+[connection signal="area_entered" from="DetectionRadius" to="." method="_on_detection_radius_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
