@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://btbgvlhaf6bd0"]
+
+[ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_grqhd"]
+[ext_resource type="Script" uid="uid://diuck70avryjt" path="res://Scenes/path_follow_2d.gd" id="2_2tlwn"]
+[ext_resource type="Texture2D" uid="uid://w5lcekw5jblk" path="res://Images/cloud better.png" id="2_tgdfv"]
+[ext_resource type="Texture2D" uid="uid://daetxkwtvntxg" path="res://Images/some_dude-removebg-preview.png" id="4_2tlwn"]
+
+[sub_resource type="Curve2D" id="Curve2D_a40hv"]
+_data = {
+"points": PackedVector2Array(406.2839, 159.77457, 0, 0, 1889, 930, 0, 0, 0, 0, 1889, 930, 0, 0, 0, 0, 15, 928, 0, 0, 0, 0, 1889, 930)
+}
+point_count = 4
+
+[node name="Node2D" type="Node2D" unique_id=1920271277]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=413217497]
+position = Vector2(960, 540)
+texture = ExtResource("1_grqhd")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1949079455]
+curve = SubResource("Curve2D_a40hv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1088459401]
+position = Vector2(1450.2694, 929.53174)
+rotation = 3.1415927
+progress = 3309.29
+rotates = false
+script = ExtResource("2_2tlwn")
+
+[node name="CloudBetter" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1811096375]
+position = Vector2(0.26941657, 84.53174)
+rotation = 3.1415927
+scale = Vector2(0.5516667, 0.535)
+texture = ExtResource("2_tgdfv")
+
+[node name="SomeDudeRemovebgPreview" type="Sprite2D" parent="Path2D" unique_id=1929084602]
+position = Vector2(1299.75, 233.5)
+scale = Vector2(0.613, 0.602)
+texture = ExtResource("4_2tlwn")
