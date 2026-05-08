@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://btbgvlhaf6bd0"]
 
 [ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_grqhd"]
-[ext_resource type="Script" uid="uid://diuck70avryjt" path="res://Scenes/path_follow_2d.gd" id="2_2tlwn"]
+[ext_resource type="Script" uid="uid://diuck70avryjt" path="res://Scripts/path_follow_2d.gd" id="2_2tlwn"]
 [ext_resource type="Texture2D" uid="uid://w5lcekw5jblk" path="res://Images/cloud better.png" id="2_tgdfv"]
 [ext_resource type="Texture2D" uid="uid://daetxkwtvntxg" path="res://Images/some_dude-removebg-preview.png" id="4_2tlwn"]
+[ext_resource type="Script" uid="uid://cwgih6pewshyf" path="res://Scripts/some_dude_removebg_preview.gd" id="5_a40hv"]
+[ext_resource type="Texture2D" uid="uid://x4f0igb1q72f" path="res://Images/knight-removebg-preview.png" id="6_48edw"]
+[ext_resource type="Script" uid="uid://dd2drh5186h" path="res://Scripts/knight_removebg_preview.gd" id="7_47jpj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48edw"]
+size = Vector2(1920, 127)
 
 [sub_resource type="Curve2D" id="Curve2D_a40hv"]
 _data = {
@@ -11,11 +17,26 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47jpj"]
+radius = 138.6623
+height = 465.1162
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13otf"]
+size = Vector2(422, 430)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48edw"]
+
 [node name="Node2D" type="Node2D" unique_id=1920271277]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=413217497]
 position = Vector2(960, 540)
 texture = ExtResource("1_grqhd")
+
+[node name="Area2D" type="Area2D" parent="Background" unique_id=646167789]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Background/Area2D" unique_id=2062892732]
+position = Vector2(-1, 474.5)
+shape = SubResource("RectangleShape2D_48edw")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1949079455]
 curve = SubResource("Curve2D_a40hv")
@@ -34,6 +55,36 @@ scale = Vector2(0.5516667, 0.535)
 texture = ExtResource("2_tgdfv")
 
 [node name="SomeDudeRemovebgPreview" type="Sprite2D" parent="Path2D" unique_id=1929084602]
-position = Vector2(1299.75, 233.5)
+position = Vector2(312, 809.00006)
 scale = Vector2(0.613, 0.602)
 texture = ExtResource("4_2tlwn")
+script = ExtResource("5_a40hv")
+
+[node name="Area2D" type="Area2D" parent="Path2D/SomeDudeRemovebgPreview" unique_id=1963350540]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/SomeDudeRemovebgPreview/Area2D" unique_id=1201842793]
+shape = SubResource("CapsuleShape2D_47jpj")
+
+[node name="KnightRemovebgPreview" type="Sprite2D" parent="Path2D" unique_id=483408617]
+position = Vector2(941, 836)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_48edw")
+script = ExtResource("7_47jpj")
+
+[node name="Area2D" type="Area2D" parent="Path2D/KnightRemovebgPreview" unique_id=1266811465]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/KnightRemovebgPreview/Area2D" unique_id=1964505580]
+position = Vector2(-3, 5)
+shape = SubResource("RectangleShape2D_13otf")
+
+[node name="Label" type="Label" parent="." unique_id=770666749]
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 784.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.9607843, 0.94509804, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.9882353, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_48edw")
+text = "Goal: Reach the end and claim your treasure!"
