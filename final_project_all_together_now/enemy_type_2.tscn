@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://50bujvpp72k3"]
 
-[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_40j3f"]
+[ext_resource type="Texture2D" uid="uid://clatv31aye2cg" path="res://Images/Snail Sheet.png" id="1_40j3f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4np1"]
 radius = 200.04
@@ -8,11 +8,29 @@ radius = 200.04
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ikp6"]
 size = Vector2(120, 129)
 
-[node name="Enemy_Type_2" type="CharacterBody2D" unique_id=1489634163]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4np1"]
+atlas = ExtResource("1_40j3f")
+region = Rect2(0, 0, 64, 100)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1506079007]
-self_modulate = Color(1, 0, 1, 1)
-texture = ExtResource("1_40j3f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ikp6"]
+atlas = ExtResource("1_40j3f")
+region = Rect2(64, 0, 64, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0861"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4np1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ikp6")
+}],
+"loop": true,
+"name": &"Slither",
+"speed": 5.0
+}]
+
+[node name="Enemy_Type_2" type="CharacterBody2D" unique_id=1489634163]
 
 [node name="Sight" type="Area2D" parent="." unique_id=1094871927]
 
@@ -23,3 +41,7 @@ shape = SubResource("CircleShape2D_w4np1")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_3ikp6")
 debug_color = Color(0.35112584, 0.61693203, 0.16516039, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664573346]
+sprite_frames = SubResource("SpriteFrames_v0861")
+animation = &"Slither"
