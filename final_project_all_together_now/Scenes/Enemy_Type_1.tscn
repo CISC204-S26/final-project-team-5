@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3n7rkl2gq2jv" path="res://Scripts/enemy_type_1.gd" id="1_13dix"]
 [ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_iu0l3"]
+[ext_resource type="PackedScene" uid="uid://sp6tde2s5sp3" path="res://Scenes/projectile.tscn" id="3_tk254"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13dix"]
 radius = 208.19463
@@ -28,5 +29,10 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_iu0l3")
 debug_color = Color(0.5459287, 0.2163502, 0.032310653, 0.41960785)
 
+[node name="Projectile" parent="." unique_id=1255197433 instance=ExtResource("3_tk254")]
+position = Vector2(-90, -7)
+
+[connection signal="fire" from="." to="Projectile" method="_on_enemy_type_1_fire"]
 [connection signal="area_entered" from="DetectionRadius" to="." method="_on_detection_radius_area_entered"]
+[connection signal="area_exited" from="DetectionRadius" to="." method="_on_detection_radius_area_exited"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

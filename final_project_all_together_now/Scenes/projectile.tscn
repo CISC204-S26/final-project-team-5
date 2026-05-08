@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://sp6tde2s5sp3"]
+
+[ext_resource type="Script" uid="uid://dhcm1fm4xto1s" path="res://Scenes/projectile.gd" id="1_f8cdk"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_akgne"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a85iw"]
+radius = 19.924858
+
+[node name="Projectile" type="Node2D" unique_id=1255197433]
+script = ExtResource("1_f8cdk")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=976052242]
+position = Vector2(5.4999986, 6.5000043)
+scale = Vector2(39.044224, 39.00001)
+mesh = SubResource("SphereMesh_akgne")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=750022637]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1929284584]
+position = Vector2(5, 6)
+shape = SubResource("CircleShape2D_a85iw")
