@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj86uoc8gvup1"]
+
+[ext_resource type="Script" uid="uid://cps0xkattskdt" path="res://Scripts/knight.gd" id="1_b66j6"]
+[ext_resource type="Texture2D" uid="uid://x4f0igb1q72f" path="res://Images/knight-removebg-preview.png" id="2_43hye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsuie"]
+size = Vector2(211, 225)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=654441621]
+script = ExtResource("1_b66j6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=279143741]
+position = Vector2(250, 255)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_43hye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2071509158]
+position = Vector2(249.5, 254.5)
+shape = SubResource("RectangleShape2D_nsuie")
