@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dyb0q0r7837jj"]
+
+[ext_resource type="Texture2D" uid="uid://xpaw1gaul6mw" path="res://Images/star_2-removebg-preview.png" id="1_3rsma"]
+[ext_resource type="Script" uid="uid://l5cdoxaqm8xu" path="res://Scenes/collectable.gd" id="1_licok"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3rsma"]
+radius = 118.10589
+
+[node name="Node2D" type="Area2D" unique_id=1160186935]
+script = ExtResource("1_licok")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=875896724]
+position = Vector2(626, 317)
+texture = ExtResource("1_3rsma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=205616373]
+position = Vector2(627, 310)
+shape = SubResource("CircleShape2D_3rsma")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

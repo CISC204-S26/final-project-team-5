@@ -5,9 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://w5lcekw5jblk" path="res://Images/cloud better.png" id="2_tgdfv"]
 [ext_resource type="PackedScene" uid="uid://dq6vi37bdn4hb" path="res://Scenes/some_dude.tscn" id="4_2tlwn"]
 [ext_resource type="PackedScene" uid="uid://bj86uoc8gvup1" path="res://Scenes/knight.tscn" id="4_a40hv"]
+[ext_resource type="Texture2D" uid="uid://dxix3bwaxsjv5" path="res://Images/moss.jpg" id="6_rsg50"]
+[ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="7_48edw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48edw"]
 size = Vector2(1920, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsg50"]
+size = Vector2(581, 41)
 
 [sub_resource type="Curve2D" id="Curve2D_a40hv"]
 _data = {
@@ -16,6 +21,16 @@ _data = {
 point_count = 4
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48edw"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_48edw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47jpj"]
+size = Vector2(1, 1.0212756)
+
+[sub_resource type="QuadMesh" id="QuadMesh_47jpj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13otf"]
+size = Vector2(1.0021784, 1.0028489)
 
 [node name="Node2D" type="Node2D" unique_id=1920271277]
 
@@ -29,6 +44,12 @@ texture = ExtResource("1_grqhd")
 position = Vector2(-1, 474.5)
 shape = SubResource("RectangleShape2D_48edw")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Background" unique_id=2116173991]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/StaticBody2D" unique_id=273099822]
+position = Vector2(364.5, -168.5)
+shape = SubResource("RectangleShape2D_rsg50")
+
 [node name="Path2D" type="Path2D" parent="." unique_id=1949079455]
 curve = SubResource("Curve2D_a40hv")
 
@@ -39,7 +60,7 @@ progress = 3309.29
 rotates = false
 script = ExtResource("2_2tlwn")
 
-[node name="CloudBetter" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1811096375]
+[node name="Cloud" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1811096375]
 position = Vector2(0.26941657, 84.53174)
 rotation = 3.1415927
 scale = Vector2(0.5516667, 0.535)
@@ -55,10 +76,43 @@ theme_override_colors/font_shadow_color = Color(0.9882353, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_48edw")
-text = "Goal: Reach the end and claim your treasure!"
+text = "Goal: Collect stars as you progress and reach the end!"
 
-[node name="Node2D" parent="." unique_id=654441621 instance=ExtResource("4_a40hv")]
+[node name="Knight" parent="." unique_id=654441621 instance=ExtResource("4_a40hv")]
 position = Vector2(531, 573)
 
-[node name="Node2D2" parent="." unique_id=2116823953 instance=ExtResource("4_2tlwn")]
+[node name="Squiddy" parent="." unique_id=2116823953 instance=ExtResource("4_2tlwn")]
 position = Vector2(226, 569)
+
+[node name="platform" type="MeshInstance2D" parent="." unique_id=1141048818]
+position = Vector2(926.00006, 646)
+rotation = 3.1415927
+scale = Vector2(212, 96.93747)
+mesh = SubResource("QuadMesh_48edw")
+texture = ExtResource("6_rsg50")
+
+[node name="Area2D" type="StaticBody2D" parent="platform" unique_id=1144761805]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="platform/Area2D" unique_id=284907960]
+position = Vector2(0, 0.005156517)
+shape = SubResource("RectangleShape2D_47jpj")
+
+[node name="platform 2" type="MeshInstance2D" parent="." unique_id=137294440]
+position = Vector2(662, 458)
+scale = Vector2(229.5, 87.75)
+mesh = SubResource("QuadMesh_47jpj")
+texture = ExtResource("6_rsg50")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform 2" unique_id=62312872]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform 2/StaticBody2D" unique_id=1106090919]
+position = Vector2(-2.3841858e-07, 0)
+shape = SubResource("RectangleShape2D_13otf")
+
+[node name="Node2D2" parent="." unique_id=1913173537 instance=ExtResource("7_48edw")]
+position = Vector2(-190.99998, 777.99994)
+scale = Vector2(0.4, 0.4)
+
+[node name="Node2D3" parent="." unique_id=1160186935 instance=ExtResource("7_48edw")]
+position = Vector2(1045.9999, 176.00006)
+scale = Vector2(0.4, 0.4)
