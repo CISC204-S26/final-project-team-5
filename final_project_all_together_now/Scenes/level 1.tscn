@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dystnh2wdi5x1" path="res://Images/rock.jpg" id="4_f66m2"]
 [ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="5_auim0"]
 [ext_resource type="Texture2D" uid="uid://b78cjo0j61lk1" path="res://Images/lever_2-removebg-preview.png" id="6_auim0"]
+[ext_resource type="Script" uid="uid://ccxmcdjclnqw4" path="res://Scenes/lever.gd" id="7_bex1k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auim0"]
 size = Vector2(1924.5, 70)
@@ -31,10 +32,10 @@ position = Vector2(-2.250061, 504)
 shape = SubResource("RectangleShape2D_auim0")
 
 [node name="Node2D" parent="." unique_id=654441621 instance=ExtResource("2_dqf42")]
-position = Vector2(-81, 617)
+position = Vector2(1620, -128)
 
 [node name="Node2D2" parent="." unique_id=2116823953 instance=ExtResource("3_f66m2")]
-position = Vector2(167, 627)
+position = Vector2(40, 637)
 
 [node name="platform1" type="MeshInstance2D" parent="." unique_id=1546719345]
 position = Vector2(1783.0001, 616)
@@ -79,7 +80,7 @@ position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
 [node name="platform4" type="MeshInstance2D" parent="." unique_id=10136699]
-position = Vector2(642, 698)
+position = Vector2(900, 708)
 rotation = 6.270163
 scale = Vector2(282.12494, 107.25)
 mesh = SubResource("QuadMesh_bex1k")
@@ -131,14 +132,97 @@ position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
 [node name="lever" type="Sprite2D" parent="." unique_id=1225458563]
-position = Vector2(47.00003, 122.99999)
+position = Vector2(34.999996, 125.00001)
 rotation = 3.1415927
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_auim0")
+script = ExtResource("7_bex1k")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="lever" unique_id=1998762971]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lever/StaticBody2D" unique_id=486239466]
+position = Vector2(-27.4999, -25.00003)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_bex1k")
+
+[node name="collectable2" parent="." unique_id=1088710608 instance=ExtResource("5_auim0")]
+position = Vector2(-98, 837)
+scale = Vector2(0.4, 0.4)
+
+[node name="lever2" type="Sprite2D" parent="." unique_id=364477352]
+position = Vector2(33, 905)
+rotation = 3.1415927
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_auim0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lever2" unique_id=292502069]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever2/StaticBody2D" unique_id=218710048]
+position = Vector2(-27.4999, -25.00003)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_bex1k")
+
+[node name="platform8" type="MeshInstance2D" parent="." unique_id=523969667]
+position = Vector2(139.00002, 705)
+rotation = 6.270163
+scale = Vector2(282.12494, 107.25)
+mesh = SubResource("QuadMesh_bex1k")
+texture = ExtResource("4_f66m2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform8" unique_id=1751415866]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform8/StaticBody2D" unique_id=52736004]
+position = Vector2(0, -0.0046625137)
+shape = SubResource("RectangleShape2D_4ff0u")
+
+[node name="platform9" type="MeshInstance2D" parent="." unique_id=465988997]
+position = Vector2(454.99997, 868)
+rotation = 7.8438487
+scale = Vector2(282.12494, 107.25)
+mesh = SubResource("QuadMesh_bex1k")
+texture = ExtResource("4_f66m2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform9" unique_id=1059869166]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform9/StaticBody2D" unique_id=1053815401]
+position = Vector2(0, -0.0046625137)
+shape = SubResource("RectangleShape2D_4ff0u")
+
+[node name="platform10" type="MeshInstance2D" parent="." unique_id=1373713276]
+position = Vector2(370, 702)
+rotation = 9.422908
+scale = Vector2(282.12494, 107.25)
+mesh = SubResource("QuadMesh_bex1k")
+texture = ExtResource("4_f66m2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform10" unique_id=269483697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform10/StaticBody2D" unique_id=127300890]
+position = Vector2(0, -0.0046625137)
+shape = SubResource("RectangleShape2D_4ff0u")
+
+[node name="platform11" type="MeshInstance2D" parent="." unique_id=1926208650]
+position = Vector2(1685, 137)
+rotation = 7.8583326
+scale = Vector2(282.12494, 107.25)
+mesh = SubResource("QuadMesh_bex1k")
+texture = ExtResource("4_f66m2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform11" unique_id=195296364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform11/StaticBody2D" unique_id=198514639]
+position = Vector2(0, -0.0046625137)
+shape = SubResource("RectangleShape2D_4ff0u")
+
+[node name="lever3" type="Sprite2D" parent="." unique_id=534289762]
+position = Vector2(35, 549)
+rotation = 3.1415927
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_auim0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lever3" unique_id=1729827259]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever3/StaticBody2D" unique_id=1953738830]
 position = Vector2(-27.4999, -25.00003)
 scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_bex1k")
