@@ -11,6 +11,7 @@ radius = 208.19463
 size = Vector2(128, 131)
 
 [node name="Enemy_Type_1" type="Node2D" unique_id=808620052]
+position = Vector2(1, 0)
 script = ExtResource("1_13dix")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=438564076]
