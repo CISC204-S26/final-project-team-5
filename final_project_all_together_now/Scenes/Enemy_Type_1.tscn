@@ -4,36 +4,33 @@
 [ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_iu0l3"]
 [ext_resource type="PackedScene" uid="uid://sp6tde2s5sp3" path="res://Scenes/projectile.tscn" id="3_tk254"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_13dix"]
-radius = 208.19463
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nsd2"]
+size = Vector2(125, 125)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu0l3"]
-size = Vector2(128, 131)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tk254"]
+radius = 186.13167
 
-[node name="Enemy_Type_1" type="Node2D" unique_id=808620052]
-position = Vector2(1, 0)
+[node name="Enemy_Type_1" type="Node2D" unique_id=633915016]
 script = ExtResource("1_13dix")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=438564076]
-self_modulate = Color(1, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945581916]
 texture = ExtResource("1_iu0l3")
 
-[node name="DetectionRadius" type="Area2D" parent="." unique_id=1923622007]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=256507910]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius" unique_id=1303905868]
-shape = SubResource("CircleShape2D_13dix")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=711197789]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_8nsd2")
 
-[node name="Hurtbox" type="Area2D" parent="." unique_id=1315343757]
+[node name="Detection Radius" type="Area2D" parent="." unique_id=629827614]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1859919351]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_iu0l3")
-debug_color = Color(0.5459287, 0.2163502, 0.032310653, 0.41960785)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Radius" unique_id=1815167597]
+shape = SubResource("CircleShape2D_tk254")
 
 [node name="Projectile" parent="." unique_id=1255197433 instance=ExtResource("3_tk254")]
-position = Vector2(-90, -7)
+position = Vector2(-117, -30)
+scale = Vector2(2, 2)
 
-[connection signal="fire" from="." to="Projectile" method="_on_enemy_type_1_fire"]
-[connection signal="area_entered" from="DetectionRadius" to="." method="_on_detection_radius_area_entered"]
-[connection signal="area_exited" from="DetectionRadius" to="." method="_on_detection_radius_area_exited"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_entered" from="Detection Radius" to="." method="_on_detection_radius_area_entered"]
+[connection signal="area_exited" from="Detection Radius" to="." method="_on_detection_radius_area_exited"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://50bujvpp72k3"]
 
 [ext_resource type="Texture2D" uid="uid://clatv31aye2cg" path="res://Images/Snail Sheet.png" id="1_40j3f"]
+[ext_resource type="Script" uid="uid://k1tqivfl04k4" path="res://Scenes/enemy_type_2.gd" id="1_wvw3j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4np1"]
 radius = 200.04
@@ -30,7 +31,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvw3j"]
+size = Vector2(122, 37)
+
 [node name="Enemy_Type_2" type="CharacterBody2D" unique_id=1489634163]
+script = ExtResource("1_wvw3j")
 
 [node name="Sight" type="Area2D" parent="." unique_id=1094871927]
 
@@ -47,3 +52,12 @@ position = Vector2(4.9999924, -25.999998)
 scale = Vector2(2.8437502, 3.3200002)
 sprite_frames = SubResource("SpriteFrames_v0861")
 animation = &"Slither"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=810901544]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1972049403]
+position = Vector2(-1, -8.5)
+shape = SubResource("RectangleShape2D_wvw3j")
+debug_color = Color(0.8145729, 0.40267208, 0.18710637, 0.41960785)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
