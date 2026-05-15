@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cmuaopwr0egdt"]
+
+[ext_resource type="Script" uid="uid://hxhi2djqcjbg" path="res://button.gd" id="1_klylv"]
+
+[node name="Title Screen" type="Control" unique_id=1120994064]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1268719470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=380971357]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 174.0
+offset_right = 887.0
+offset_bottom = 262.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Final Project"
+
+[node name="Button" type="Button" parent="." unique_id=1954904968]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 619.0
+offset_top = -62.0
+offset_right = 778.0
+offset_bottom = 34.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Start"
+script = ExtResource("1_klylv")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
