@@ -8,24 +8,13 @@ size = Vector2(1892, 129)
 
 [node name="Node2D" type="Node2D" unique_id=632507773]
 
-<<<<<<< HEAD
-[node name="bob" type="Sprite2D" parent="." unique_id=1282690882]
-visible = false
-position = Vector2(544, 349)
-texture = ExtResource("1_cvnsp")
 
-=======
->>>>>>> 185afa2579d01d49fd6907aab07efc7f6995f1a4
 [node name="Background" type="Sprite2D" parent="." unique_id=61709763]
 position = Vector2(960, 540)
 texture = ExtResource("2_6t5aa")
 
-<<<<<<< HEAD
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561440752]
 position = Vector2(954, 1015.5)
 shape = SubResource("RectangleShape2D_cvnsp")
-=======
-[node name="bob" type="Sprite2D" parent="." unique_id=1282690882]
-position = Vector2(116, 995)
-texture = ExtResource("1_cvnsp")
->>>>>>> 185afa2579d01d49fd6907aab07efc7f6995f1a4
+

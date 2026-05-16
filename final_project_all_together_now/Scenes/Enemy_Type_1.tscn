@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://tb5au4cqn1c6"]
+
+[ext_resource type="Script" uid="uid://3n7rkl2gq2jv" path="res://Scripts/enemy_type_1.gd" id="1_13dix"]
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Images/icon.svg" id="1_iu0l3"]
+[ext_resource type="PackedScene" uid="uid://sp6tde2s5sp3" path="res://Scenes/projectile.tscn" id="3_tk254"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nsd2"]
+size = Vector2(125, 125)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tk254"]
+radius = 186.13167
+
+[node name="Enemy_Type_1" type="Node2D" unique_id=633915016]
+script = ExtResource("1_13dix")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945581916]
+texture = ExtResource("1_iu0l3")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=256507910]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=711197789]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_8nsd2")
+
+[node name="Detection Radius" type="Area2D" parent="." unique_id=629827614]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Radius" unique_id=1815167597]
+shape = SubResource("CircleShape2D_tk254")
+
+[node name="Projectile" parent="." unique_id=1255197433 instance=ExtResource("3_tk254")]
+position = Vector2(-117, -30)
+scale = Vector2(2, 2)
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_entered" from="Detection Radius" to="." method="_on_detection_radius_area_entered"]
+[connection signal="area_exited" from="Detection Radius" to="." method="_on_detection_radius_area_exited"]

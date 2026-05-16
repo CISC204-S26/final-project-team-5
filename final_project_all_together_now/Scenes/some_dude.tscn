@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dq6vi37bdn4hb"]
+
+[ext_resource type="Texture2D" uid="uid://daetxkwtvntxg" path="res://Images/some_dude-removebg-preview.png" id="1_khkwc"]
+[ext_resource type="Script" uid="uid://dwro8soi6v0g8" path="res://Scripts/some_dude.gd" id="1_lq3k3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py6xa"]
+radius = 81.0
+height = 234.0
+
+[node name="Node2D" type="CharacterBody2D" unique_id=2116823953]
+script = ExtResource("1_lq3k3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=975651589]
+position = Vector2(249, 253)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_khkwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694457732]
+position = Vector2(248, 258)
+shape = SubResource("CapsuleShape2D_py6xa")
