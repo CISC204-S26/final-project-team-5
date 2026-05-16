@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="5_auim0"]
 [ext_resource type="Texture2D" uid="uid://b78cjo0j61lk1" path="res://Images/lever_2-removebg-preview.png" id="6_auim0"]
 [ext_resource type="Script" uid="uid://ccxmcdjclnqw4" path="res://Scenes/lever.gd" id="7_bex1k"]
+[ext_resource type="AudioStream" uid="uid://b80hdprqf6lbk" path="res://Sounds/freesound_community-rattle1-107616.mp3" id="8_4ff0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auim0"]
 size = Vector2(1924.5, 70)
@@ -216,7 +217,7 @@ shape = SubResource("RectangleShape2D_4ff0u")
 
 [node name="lever3" type="Sprite2D" parent="." unique_id=534289762]
 position = Vector2(35, 549)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_auim0")
 
@@ -226,3 +227,9 @@ texture = ExtResource("6_auim0")
 position = Vector2(-27.4999, -25.00003)
 scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_bex1k")
+
+[node name="LeverSound" type="AudioStreamPlayer2D" parent="." unique_id=157413797]
+position = Vector2(34.999996, 125)
+rotation = -3.1415925
+scale = Vector2(0.3, 0.3)
+stream = ExtResource("8_4ff0u")
