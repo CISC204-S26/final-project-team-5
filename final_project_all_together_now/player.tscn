@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cy6vh0ylnq37f"]
+
+[ext_resource type="Script" uid="uid://byevce12yfxqs" path="res://wizard.gd" id="1_4flbx"]
+
+[node name="Player" type="Node2D" unique_id=1757818075]
+
+[node name="Wizard" type="AnimatedSprite2D" parent="." unique_id=825440666]
+script = ExtResource("1_4flbx")

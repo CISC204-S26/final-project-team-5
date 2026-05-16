@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://d3nyil0sjbnu3"]
+
+[ext_resource type="FontFile" uid="uid://bbm36qrfy7d5m" path="res://antiquity-print.ttf" id="2_hr4p5"]
+[ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="2_tgrj3"]
+[ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="3_4wfku"]
+[ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="4_w8lu3"]
+[ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="5_f2a21"]
+[ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="6_l0ebi"]
+[ext_resource type="Texture2D" uid="uid://ciuw1m131nroi" path="res://wizardidleanim/wizidl6.png" id="7_0p0dl"]
+[ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="8_68vqm"]
+[ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="9_fjmwe"]
+[ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="10_fk0hr"]
+[ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="11_qcx5w"]
+[ext_resource type="Texture2D" uid="uid://br7yh3cc1udne" path="res://witchidleanim/witchidl5.png" id="12_q0l18"]
+[ext_resource type="Texture2D" uid="uid://rm8agyodbsnr" path="res://witchidleanim/witchidl6.png" id="13_47ylr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hcuyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tgrj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4wfku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w8lu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f2a21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l0ebi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0p0dl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rnwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_68vqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fjmwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fk0hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qcx5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q0l18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_47ylr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="START SCREEN" type="Node2D" unique_id=54857818]
+position = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=258686346]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 42.0
+offset_bottom = 47.0
+scale = Vector2(48.08, 27)
+color = Color(0, 0, 0, 1)
+
+[node name="Start button" type="Label" parent="." unique_id=2128224733]
+offset_left = 780.0
+offset_top = 713.0
+offset_right = 1108.0
+offset_bottom = 804.0
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 61
+text = "START"
+
+[node name="copyright o" type="Label" parent="." unique_id=1795834806]
+offset_left = 747.00006
+offset_top = 1014.99994
+offset_right = 1070.0
+offset_bottom = 1120.0
+scale = Vector2(1.2776805, 0.8425107)
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 38
+text = "O"
+
+[node name="copyright" type="Label" parent="copyright o" unique_id=255123131]
+layout_mode = 0
+offset_left = 52.43877
+offset_top = -11.869213
+offset_right = 389.43884
+offset_bottom = 76.13078
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 40
+text = "2026 team 5"
+
+[node name="copyright c" type="Label" parent="copyright o" unique_id=740972793]
+layout_mode = 0
+offset_left = 10.957321
+offset_top = 1.1869726
+offset_right = 333.95734
+offset_bottom = 89.18697
+scale = Vector2(0.9985883, 1.0025107)
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 25
+text = "c"
+
+[node name="Wizard" type="AnimatedSprite2D" parent="." unique_id=1435458959]
+position = Vector2(555, 698.00006)
+scale = Vector2(0.8972222, 0.75701946)
+sprite_frames = SubResource("SpriteFrames_hcuyl")
+frame_progress = 0.848158
+
+[node name="WIZARD (cloak)" type="Label" parent="Wizard" unique_id=1834364983]
+modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
+offset_left = -180.55731
+offset_top = 274.76172
+offset_right = 142.44269
+offset_bottom = 362.76172
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 51
+text = "CLOAK"
+
+[node name="witch" type="AnimatedSprite2D" parent="." unique_id=2137275567]
+position = Vector2(1353.75, 712.5)
+scale = Vector2(0.82196975, 0.7055336)
+sprite_frames = SubResource("SpriteFrames_5rnwx")
+frame_progress = 0.72733474
+
+[node name="WITCH (coven)" type="Label" parent="witch" unique_id=1982185382]
+modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
+offset_left = -170.32263
+offset_top = 283.47345
+offset_right = 152.67737
+offset_bottom = 371.47345
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 51
+text = "COVEN"
+
+[node name="Title" type="Label" parent="." unique_id=1673250972]
+modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
+offset_left = 514.0
+offset_top = 141.0
+offset_right = 1177.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 125
+text = "COVEN"
+
+[node name="title" type="Label" parent="." unique_id=682270094]
+modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
+offset_left = 531.0
+offset_top = 309.0
+offset_right = 1328.0
+offset_bottom = 492.0
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 125
+text = "& CLOAK"
