@@ -78,13 +78,23 @@ scale = Vector2(48.08, 27)
 color = Color(0, 0, 0, 1)
 
 [node name="Start button" type="Label" parent="." unique_id=2128224733]
-offset_left = 780.0
-offset_top = 713.0
-offset_right = 1108.0
-offset_bottom = 804.0
+offset_left = 782.0
+offset_top = 587.0
+offset_right = 1110.0
+offset_bottom = 678.0
 theme_override_fonts/font = ExtResource("2_hr4p5")
 theme_override_font_sizes/font_size = 61
 text = "START"
+
+[node name="Start button" type="Label" parent="Start button" unique_id=92078195]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 114.0
+offset_right = 474.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("2_hr4p5")
+theme_override_font_sizes/font_size = 51
+text = "CONTROLS"
 
 [node name="copyright o" type="Label" parent="." unique_id=1795834806]
 offset_left = 747.00006
@@ -121,7 +131,7 @@ text = "c"
 position = Vector2(555, 698.00006)
 scale = Vector2(0.8972222, 0.75701946)
 sprite_frames = SubResource("SpriteFrames_hcuyl")
-frame_progress = 0.848158
+frame_progress = 0.1398458
 
 [node name="WIZARD (cloak)" type="Label" parent="Wizard" unique_id=1834364983]
 modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
@@ -134,10 +144,10 @@ theme_override_font_sizes/font_size = 51
 text = "CLOAK"
 
 [node name="witch" type="AnimatedSprite2D" parent="." unique_id=2137275567]
-position = Vector2(1353.75, 712.5)
+position = Vector2(1355, 713)
 scale = Vector2(0.82196975, 0.7055336)
 sprite_frames = SubResource("SpriteFrames_5rnwx")
-frame_progress = 0.72733474
+frame_progress = 0.019034078
 
 [node name="WITCH (coven)" type="Label" parent="witch" unique_id=1982185382]
 modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
@@ -151,10 +161,10 @@ text = "COVEN"
 
 [node name="Title" type="Label" parent="." unique_id=1673250972]
 modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
-offset_left = 514.0
-offset_top = 141.0
-offset_right = 1177.0
-offset_bottom = 324.0
+offset_left = 579.0
+offset_top = 136.0
+offset_right = 1242.0
+offset_bottom = 319.0
 theme_override_fonts/font = ExtResource("2_hr4p5")
 theme_override_font_sizes/font_size = 125
 text = "COVEN"
