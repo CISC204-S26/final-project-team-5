@@ -1,12 +1,34 @@
-[gd_scene format=3 uid="uid://btbgvlhaf6bd0"]
+[gd_scene format=3 uid="uid://bcqjgoblo6ses"]
 
 [ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_grqhd"]
 [ext_resource type="Script" uid="uid://diuck70avryjt" path="res://Scripts/path_follow_2d.gd" id="2_2tlwn"]
 [ext_resource type="Texture2D" uid="uid://w5lcekw5jblk" path="res://Images/cloud better.png" id="2_tgdfv"]
-[ext_resource type="PackedScene" uid="uid://dq6vi37bdn4hb" path="res://Scenes/some_dude.tscn" id="4_2tlwn"]
-[ext_resource type="PackedScene" uid="uid://bj86uoc8gvup1" path="res://Scenes/knight.tscn" id="4_a40hv"]
+[ext_resource type="Script" uid="uid://d08xmv50h3xqo" path="res://witch.gd" id="6_gu8jm"]
 [ext_resource type="Texture2D" uid="uid://dxix3bwaxsjv5" path="res://Images/moss.jpg" id="6_rsg50"]
-[ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="7_48edw"]
+[ext_resource type="PackedScene" path="res://Scenes/collectable.tscn" id="7_48edw"]
+[ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="7_mrk8n"]
+[ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="8_ib7tp"]
+[ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="9_2spfv"]
+[ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="10_dl7kw"]
+[ext_resource type="Texture2D" uid="uid://br7yh3cc1udne" path="res://witchidleanim/witchidl5.png" id="11_a3kfm"]
+[ext_resource type="Texture2D" uid="uid://rm8agyodbsnr" path="res://witchidleanim/witchidl6.png" id="12_v162i"]
+[ext_resource type="Texture2D" uid="uid://qshjw7t6ye6u" path="res://witchwalkanim/witchwalk1.png" id="13_jict5"]
+[ext_resource type="Texture2D" uid="uid://baoyc38nt32ut" path="res://witchwalkanim/witchwalk2.png" id="14_qrup4"]
+[ext_resource type="Texture2D" uid="uid://d2wrdubx6iqgw" path="res://witchwalkanim/witchwalk3.png" id="15_f3ods"]
+[ext_resource type="Texture2D" uid="uid://x6md16h83ann" path="res://witchwalkanim/witchwalk4.png" id="16_iye1m"]
+[ext_resource type="Texture2D" uid="uid://dny3fwrbb2m5i" path="res://witchwalkanim/witchwalk5.png" id="17_gl326"]
+[ext_resource type="Script" uid="uid://byevce12yfxqs" path="res://wizard.gd" id="18_8mcrk"]
+[ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="19_r4c7a"]
+[ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="20_cx154"]
+[ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="21_oxo1r"]
+[ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="22_se8tb"]
+[ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="23_nx8fa"]
+[ext_resource type="Texture2D" uid="uid://ciuw1m131nroi" path="res://wizardidleanim/wizidl6.png" id="24_vvyo6"]
+[ext_resource type="Texture2D" uid="uid://bc2qamwn24xms" path="res://wizardwalkanim/wizwalk1.png" id="25_m5w1i"]
+[ext_resource type="Texture2D" uid="uid://d3m86k4j61xsb" path="res://wizardwalkanim/wizwalk2.png" id="26_6cm0v"]
+[ext_resource type="Texture2D" uid="uid://kdaq5s5ij8kx" path="res://wizardwalkanim/wizwalk3.png" id="27_j26ou"]
+[ext_resource type="Texture2D" uid="uid://1rvudc108h1e" path="res://wizardwalkanim/wizwalk4.png" id="28_8suxd"]
+[ext_resource type="Texture2D" uid="uid://3osdvipdksu3" path="res://wizardwalkanim/wizwalk5.png" id="29_w28be"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48edw"]
 size = Vector2(1920, 127)
@@ -31,6 +53,104 @@ size = Vector2(1, 1.0212756)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13otf"]
 size = Vector2(1.0021784, 1.0028489)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m183y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mrk8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ib7tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2spfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dl7kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a3kfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v162i")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_jict5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qrup4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f3ods")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_iye1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gl326")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owkvg"]
+size = Vector2(393.5, 462)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_606h2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_r4c7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cx154")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oxo1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_se8tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nx8fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vvyo6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_m5w1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6cm0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_j26ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8suxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_w28be")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khcx2"]
+size = Vector2(356, 443)
 
 [node name="Node2D" type="Node2D" unique_id=1920271277]
 
@@ -78,12 +198,6 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_48edw")
 text = "Goal: Collect stars as you progress and reach the end!"
 
-[node name="Knight" parent="." unique_id=654441621 instance=ExtResource("4_a40hv")]
-position = Vector2(531, 573)
-
-[node name="Squiddy" parent="." unique_id=2116823953 instance=ExtResource("4_2tlwn")]
-position = Vector2(226, 569)
-
 [node name="platform" type="MeshInstance2D" parent="." unique_id=1141048818]
 position = Vector2(926.00006, 646)
 rotation = 3.1415927
@@ -116,3 +230,30 @@ scale = Vector2(0.4, 0.4)
 [node name="Node2D3" parent="." unique_id=1160186935 instance=ExtResource("7_48edw")]
 position = Vector2(1045.9999, 176.00006)
 scale = Vector2(0.4, 0.4)
+
+[node name="Witch" type="CharacterBody2D" parent="." unique_id=777649951]
+position = Vector2(380.99997, 796)
+scale = Vector2(0.7966349, 0.68391454)
+script = ExtResource("6_gu8jm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch" unique_id=532592461]
+sprite_frames = SubResource("SpriteFrames_m183y")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Witch" unique_id=339617950]
+position = Vector2(-25.75, 2)
+shape = SubResource("RectangleShape2D_owkvg")
+
+[node name="Wizard" type="CharacterBody2D" parent="." unique_id=577882203]
+position = Vector2(250, 284)
+scale = Vector2(0.9339277, 0.7291641)
+script = ExtResource("18_8mcrk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wizard" unique_id=1368722677]
+position = Vector2(477, 700)
+sprite_frames = SubResource("SpriteFrames_606h2")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard" unique_id=1002303281]
+position = Vector2(473, 699.5)
+shape = SubResource("RectangleShape2D_khcx2")

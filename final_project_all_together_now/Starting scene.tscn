@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d3nyil0sjbnu3"]
 
+[ext_resource type="Script" uid="uid://buehb71esilul" path="res://start_button.gd" id="2_4wfku"]
 [ext_resource type="FontFile" uid="uid://bbm36qrfy7d5m" path="res://antiquity-print.ttf" id="2_hr4p5"]
 [ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="2_tgrj3"]
 [ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="3_4wfku"]
+[ext_resource type="Script" uid="uid://hj2s5ojhl8os" path="res://controls_button.gd" id="3_w8lu3"]
 [ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="4_w8lu3"]
 [ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="5_f2a21"]
 [ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="6_l0ebi"]
@@ -10,9 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="8_68vqm"]
 [ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="9_fjmwe"]
 [ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="10_fk0hr"]
+[ext_resource type="Script" uid="uid://cld1pb5hf40eo" path="res://wizard_idle.gd" id="10_l0ebi"]
 [ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="11_qcx5w"]
 [ext_resource type="Texture2D" uid="uid://br7yh3cc1udne" path="res://witchidleanim/witchidl5.png" id="12_q0l18"]
 [ext_resource type="Texture2D" uid="uid://rm8agyodbsnr" path="res://witchidleanim/witchidl6.png" id="13_47ylr"]
+[ext_resource type="Script" uid="uid://dpv8ihpkjnc6i" path="res://witch_idle.gd" id="17_0p0dl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hcuyl"]
 animations = [{
@@ -36,7 +40,7 @@ animations = [{
 "texture": ExtResource("7_0p0dl")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -62,7 +66,7 @@ animations = [{
 "texture": ExtResource("13_47ylr")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -77,24 +81,25 @@ offset_bottom = 47.0
 scale = Vector2(48.08, 27)
 color = Color(0, 0, 0, 1)
 
-[node name="Start button" type="Label" parent="." unique_id=2128224733]
+[node name="Start Button" type="Button" parent="." unique_id=1494208706]
 offset_left = 782.0
 offset_top = 587.0
-offset_right = 1110.0
-offset_bottom = 678.0
+offset_right = 1113.0
+offset_bottom = 683.0
 theme_override_fonts/font = ExtResource("2_hr4p5")
-theme_override_font_sizes/font_size = 61
+theme_override_font_sizes/font_size = 60
 text = "START"
+script = ExtResource("2_4wfku")
 
-[node name="Start button" type="Label" parent="Start button" unique_id=92078195]
-layout_mode = 0
-offset_left = -51.0
-offset_top = 114.0
-offset_right = 474.0
-offset_bottom = 205.0
+[node name="Controls Button" type="Button" parent="." unique_id=172110343]
+offset_left = 727.0
+offset_top = 698.0
+offset_right = 1166.0
+offset_bottom = 780.0
 theme_override_fonts/font = ExtResource("2_hr4p5")
-theme_override_font_sizes/font_size = 51
+theme_override_font_sizes/font_size = 50
 text = "CONTROLS"
+script = ExtResource("3_w8lu3")
 
 [node name="copyright o" type="Label" parent="." unique_id=1795834806]
 offset_left = 747.00006
@@ -127,13 +132,15 @@ theme_override_fonts/font = ExtResource("2_hr4p5")
 theme_override_font_sizes/font_size = 25
 text = "c"
 
-[node name="Wizard" type="AnimatedSprite2D" parent="." unique_id=1435458959]
+[node name="Wizard idle" type="AnimatedSprite2D" parent="." unique_id=1435458959]
 position = Vector2(555, 698.00006)
 scale = Vector2(0.8972222, 0.75701946)
 sprite_frames = SubResource("SpriteFrames_hcuyl")
-frame_progress = 0.1398458
+animation = &"idle"
+frame_progress = 0.95139885
+script = ExtResource("10_l0ebi")
 
-[node name="WIZARD (cloak)" type="Label" parent="Wizard" unique_id=1834364983]
+[node name="WIZARD (cloak)" type="Label" parent="Wizard idle" unique_id=1834364983]
 modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
 offset_left = -180.55731
 offset_top = 274.76172
@@ -143,13 +150,15 @@ theme_override_fonts/font = ExtResource("2_hr4p5")
 theme_override_font_sizes/font_size = 51
 text = "CLOAK"
 
-[node name="witch" type="AnimatedSprite2D" parent="." unique_id=2137275567]
-position = Vector2(1355, 713)
+[node name="witch idle" type="AnimatedSprite2D" parent="." unique_id=2137275567]
+position = Vector2(1357, 713)
 scale = Vector2(0.82196975, 0.7055336)
 sprite_frames = SubResource("SpriteFrames_5rnwx")
-frame_progress = 0.019034078
+animation = &"idle"
+frame_progress = 0.3216085
+script = ExtResource("17_0p0dl")
 
-[node name="WITCH (coven)" type="Label" parent="witch" unique_id=1982185382]
+[node name="WITCH (coven)" type="Label" parent="witch idle" unique_id=1982185382]
 modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
 offset_left = -170.32263
 offset_top = 283.47345

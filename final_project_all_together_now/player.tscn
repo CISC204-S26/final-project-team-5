@@ -1,8 +1,90 @@
 [gd_scene format=3 uid="uid://cy6vh0ylnq37f"]
 
 [ext_resource type="Script" uid="uid://byevce12yfxqs" path="res://wizard.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bc2qamwn24xms" path="res://wizardwalkanim/wizwalk1.png" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://d3m86k4j61xsb" path="res://wizardwalkanim/wizwalk2.png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="2_ivps1"]
+[ext_resource type="Texture2D" uid="uid://kdaq5s5ij8kx" path="res://wizardwalkanim/wizwalk3.png" id="3_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="3_urp6f"]
+[ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="4_bwjto"]
+[ext_resource type="Texture2D" uid="uid://1rvudc108h1e" path="res://wizardwalkanim/wizwalk4.png" id="4_dw050"]
+[ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="5_606se"]
+[ext_resource type="Texture2D" uid="uid://3osdvipdksu3" path="res://wizardwalkanim/wizwalk5.png" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="6_u1c27"]
+[ext_resource type="Texture2D" uid="uid://ciuw1m131nroi" path="res://wizardidleanim/wizidl6.png" id="7_op7ga"]
 
-[node name="Player" type="Node2D" unique_id=1757818075]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivps1"]
+size = Vector2(79.94806, 20)
 
-[node name="Wizard" type="AnimatedSprite2D" parent="." unique_id=825440666]
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_op7ga")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1jxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b26j0")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q13i1"]
+size = Vector2(356, 443)
+
+[node name="Wizard" type="Node2D" unique_id=1757818075]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1211262430]
+rotation = 3.1415925
+scale = Vector2(74.70275, 413.47775)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=309132116]
+position = Vector2(-16.97394, -2.3169324)
+rotation = 3.1415925
+scale = Vector2(0.5670474, 0.008126195)
+shape = SubResource("RectangleShape2D_ivps1")
+
+[node name="Wizard" type="CharacterBody2D" parent="." unique_id=843163892]
 script = ExtResource("1_4flbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wizard" unique_id=302537702]
+position = Vector2(477, 700)
+sprite_frames = SubResource("SpriteFrames_n7ghd")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard" unique_id=1100759196]
+position = Vector2(473, 699.5)
+shape = SubResource("RectangleShape2D_q13i1")

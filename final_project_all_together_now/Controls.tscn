@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://bcmpta7tea85g"]
+
+[ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="1_2tab8"]
+[ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="2_e2eon"]
+[ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="3_sj1ci"]
+[ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="4_0eujw"]
+[ext_resource type="Texture2D" uid="uid://br7yh3cc1udne" path="res://witchidleanim/witchidl5.png" id="5_0565a"]
+[ext_resource type="Texture2D" uid="uid://rm8agyodbsnr" path="res://witchidleanim/witchidl6.png" id="6_4q5ub"]
+[ext_resource type="Script" uid="uid://dpv8ihpkjnc6i" path="res://witch_idle.gd" id="7_0eujw"]
+[ext_resource type="FontFile" uid="uid://bbm36qrfy7d5m" path="res://antiquity-print.ttf" id="7_aldwq"]
+[ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="8_6u1o4"]
+[ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="9_rbbld"]
+[ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="10_qm0x4"]
+[ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="11_4r5es"]
+[ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="12_ofqh0"]
+[ext_resource type="Texture2D" uid="uid://ciuw1m131nroi" path="res://wizardidleanim/wizidl6.png" id="13_yb6uw"]
+[ext_resource type="Script" uid="uid://buehb71esilul" path="res://start_button.gd" id="14_e2eon"]
+[ext_resource type="Script" uid="uid://cld1pb5hf40eo" path="res://wizard_idle.gd" id="15_0565a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0j48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2tab8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e2eon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sj1ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0eujw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0565a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4q5ub")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3a70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_6u1o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rbbld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qm0x4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4r5es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ofqh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yb6uw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=995100032]
+position = Vector2(0, 2)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=929995033]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 42.0
+offset_bottom = 47.0
+scale = Vector2(48.08, 27)
+color = Color(0, 0, 0, 1)
+
+[node name="witch idle" type="AnimatedSprite2D" parent="." unique_id=997507935]
+position = Vector2(1143, 383.99997)
+scale = Vector2(0.82196975, 0.7055336)
+sprite_frames = SubResource("SpriteFrames_k0j48")
+animation = &"idle"
+frame_progress = 0.9284705
+script = ExtResource("7_0eujw")
+
+[node name="WITCH (coven)" type="Label" parent="witch idle" unique_id=406586594]
+modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
+offset_left = 222.63594
+offset_top = -269.2997
+offset_right = 545.6359
+offset_bottom = -181.29971
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 51
+text = "COVEN"
+
+[node name="WITCH (coven)2" type="Label" parent="witch idle/WITCH (coven)" unique_id=308640005]
+modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
+layout_mode = 0
+offset_left = 64.880264
+offset_top = 467.73123
+offset_right = 387.88025
+offset_bottom = 932.7312
+rotation = 1.5712248
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 51
+text = "<"
+
+[node name="WITCH (coven)" type="Label" parent="witch idle/WITCH (coven)" unique_id=200090589]
+modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
+layout_mode = 0
+offset_left = 8.516135
+offset_top = 124.72833
+offset_right = 331.51614
+offset_bottom = 589.72833
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 51
+text = "Controls
+
+< - left
+> - right
+   - up
+   "
+
+[node name="Wizard idle" type="AnimatedSprite2D" parent="." unique_id=1226694250]
+position = Vector2(325, 381.00003)
+scale = Vector2(0.8972222, 0.75701946)
+sprite_frames = SubResource("SpriteFrames_x3a70")
+animation = &"idle"
+frame_progress = 0.27990842
+script = ExtResource("15_0565a")
+
+[node name="WIZARD (cloak)" type="Label" parent="Wizard idle" unique_id=800023029]
+modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
+offset_left = 171.64088
+offset_top = -240.41655
+offset_right = 494.64087
+offset_bottom = -152.41655
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 51
+text = "CLOAK"
+
+[node name="WIZARD (cloak)" type="Label" parent="Wizard idle/WIZARD (cloak)" unique_id=355092167]
+modulate = Color(0.5411765, 0.38431373, 0.6627451, 1)
+layout_mode = 0
+offset_top = 116.24531
+offset_right = 323.0
+offset_bottom = 581.2453
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 51
+text = "Controls
+
+A- left
+W- up
+D- right"
+
+[node name="Start Button" type="Button" parent="." unique_id=1391408571]
+offset_left = 782.0
+offset_top = 925.0
+offset_right = 1113.0
+offset_bottom = 1021.0
+theme_override_fonts/font = ExtResource("7_aldwq")
+theme_override_font_sizes/font_size = 60
+text = "START"
+script = ExtResource("14_e2eon")
