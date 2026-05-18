@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 200
-@export var jump_force := -500
+@export var jump_force := -1000
 @export var gravity := 900
 
 func _physics_process(delta):
@@ -37,3 +37,8 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("Walk")
 	else:
 		$AnimatedSprite2D.play("Idle")
+
+
+func _on_portal_body_entered(body: Node2D) -> void:
+	if body.name == "Witch":
+		get_tree().change_scene(next_scene_path)
