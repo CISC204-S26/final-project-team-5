@@ -11,6 +11,8 @@ radius = 113.110565
 size = Vector2(93, 105)
 
 [node name="Lever" type="StaticBody2D" unique_id=1841538704]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_0so5j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=236811433]
