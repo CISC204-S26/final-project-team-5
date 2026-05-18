@@ -65,7 +65,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q13i1"]
 size = Vector2(356, 443)
 
-[node name="Wizard" type="Node2D" unique_id=1757818075]
+[node name="Wizard" type="Node2D" unique_id=1757818075 groups=["Player"]]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1211262430]
 rotation = 3.1415925

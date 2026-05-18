@@ -41,9 +41,9 @@ size = Vector2(1920, 127)
 
 [sub_resource type="Curve2D" id="Curve2D_i548e"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1033, 910, 0, 0, 0, 0, 600, 908)
+"points": PackedVector2Array(0, 0, 0, 0, 1078, 898, 0, 0, 0, 0, -711, 882, 0, 0, 0, 0, 1074, 892)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mln1k"]
 animations = [{
@@ -200,8 +200,8 @@ position = Vector2(716, 53)
 curve = SubResource("Curve2D_i548e")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="GroundPath" unique_id=1226264030]
-position = Vector2(1033, 910)
-rotation = -3.1369739
+position = Vector2(1078, 898)
+rotation = -3.1326494
 script = ExtResource("2_fkw01")
 
 [node name="EvilWizard" type="CharacterBody2D" parent="GroundPath/PathFollow2D" unique_id=995021586]
