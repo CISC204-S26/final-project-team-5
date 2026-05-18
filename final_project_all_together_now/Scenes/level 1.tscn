@@ -187,12 +187,12 @@ rotation = -3.1415925
 scale = Vector2(0.3, 0.3)
 stream = ExtResource("8_4ff0u")
 
-[node name="portal" parent="." unique_id=1422304667 instance=ExtResource("9_ayjtp")]
+[node name="portal" parent="." unique_id=1422304667 groups=["Player"] instance=ExtResource("9_ayjtp")]
 position = Vector2(1434, 575)
 scale = Vector2(0.8, 0.8)
 NEXT_LEVEL = "uid://cummrlhkf8awl"
 
-[node name="Witch" parent="." unique_id=1613664162 instance=ExtResource("8_ayjtp")]
+[node name="Witch" parent="." unique_id=1613664162 groups=["Player"] instance=ExtResource("8_ayjtp")]
 position = Vector2(168.00002, 597)
 scale = Vector2(0.45, 0.45)
 
