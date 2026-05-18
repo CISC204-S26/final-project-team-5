@@ -37,3 +37,6 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("Walk")
 	else:
 		$AnimatedSprite2D.play("Idle")
+
+
+if Input.is_action_just_pressed()
