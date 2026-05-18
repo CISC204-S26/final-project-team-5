@@ -204,8 +204,11 @@ NEXT_LEVEL = "uid://cummrlhkf8awl"
 position = Vector2(168.00002, 597)
 scale = Vector2(0.45, 0.45)
 
+[node name="Witch" parent="Witch" index="0" unique_id=9504726]
+position = Vector2(1217.7778, 677.7778)
+
 [node name="Wizard" parent="." unique_id=1757818075 instance=ExtResource("9_q08mx")]
-position = Vector2(1637, -177)
+position = Vector2(815, 591)
 scale = Vector2(0.45, 0.45)
 
 [node name="Lever" parent="." unique_id=1841538704 groups=["Player"] instance=ExtResource("8_q08mx")]
@@ -224,3 +227,5 @@ position = Vector2(46, 115)
 [connection signal="disable_wall" from="Lever2" to="StaticBody2D3" method="_on_lever_2_disable_wall"]
 [connection signal="disable_wall" from="Lever3" to="." method="_on_lever_3_disable_wall"]
 [connection signal="disable_wall" from="Lever3" to="StaticBody2D2" method="_on_lever_3_disable_wall"]
+
+[editable path="Witch"]
