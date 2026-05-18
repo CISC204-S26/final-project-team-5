@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://ccxcmb54vch6v"]
 
+[ext_resource type="Script" uid="uid://b7unup25wernn" path="res://Scenes/level_1.gd" id="1_ayjtp"]
 [ext_resource type="Texture2D" uid="uid://053r0n56v77n" path="res://Images/level 1 again again.jpg" id="1_jer6a"]
 [ext_resource type="Texture2D" uid="uid://dystnh2wdi5x1" path="res://Images/rock.jpg" id="4_f66m2"]
 [ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="5_auim0"]
 [ext_resource type="AudioStream" uid="uid://b80hdprqf6lbk" path="res://Sounds/freesound_community-rattle1-107616.mp3" id="8_4ff0u"]
 [ext_resource type="PackedScene" uid="uid://bd64w4jh7yebf" path="res://witch.tscn" id="8_ayjtp"]
-[ext_resource type="PackedScene" uid="uid://ctn371iy3o34o" path="res://lever.tscn" id="8_q08mx"]
+[ext_resource type="PackedScene" uid="uid://c3sv6s6bfbrgf" path="res://Scenes/Lever.tscn" id="8_q08mx"]
 [ext_resource type="PackedScene" uid="uid://ddfes06mfr543" path="res://portal.tscn" id="9_ayjtp"]
 [ext_resource type="PackedScene" uid="uid://ce6l2o6hrex4h" path="res://wizard.tscn" id="9_q08mx"]
 
@@ -17,7 +18,8 @@ size = Vector2(1924.5, 70)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ff0u"]
 size = Vector2(0.99845886, 1.0163174)
 
-[node name="Node2D" type="Node2D" unique_id=1776988360]
+[node name="level_1" type="Node2D" unique_id=1776988360]
+script = ExtResource("1_ayjtp")
 
 [node name="Level1AgainAgain" type="Sprite2D" parent="." unique_id=1382559541]
 position = Vector2(960.00006, 540)
@@ -198,17 +200,15 @@ scale = Vector2(0.45, 0.45)
 position = Vector2(1619, -186)
 scale = Vector2(0.45, 0.45)
 
-[node name="Lever" parent="." unique_id=819927123 node_paths=PackedStringArray("target_object") instance=ExtResource("8_q08mx")]
-position = Vector2(-41, 819)
-scale = Vector2(0.3, 0.3)
-target_object = NodePath("../platform11")
+[node name="Lever" parent="." unique_id=1841538704 instance=ExtResource("8_q08mx")]
+position = Vector2(46, 881)
 
-[node name="Lever2" parent="." unique_id=467041319 node_paths=PackedStringArray("target_object") instance=ExtResource("8_q08mx")]
-position = Vector2(-43, 456.00006)
-scale = Vector2(0.3, 0.3)
-target_object = NodePath("../platform9")
+[node name="Lever2" parent="." unique_id=38143319 instance=ExtResource("8_q08mx")]
+position = Vector2(41, 484)
 
-[node name="Lever3" parent="." unique_id=2019643434 node_paths=PackedStringArray("target_object") instance=ExtResource("8_q08mx")]
-position = Vector2(-41, 41.00006)
-scale = Vector2(0.3, 0.3)
-target_object = NodePath("../platform3")
+[node name="Lever3" parent="." unique_id=411960076 instance=ExtResource("8_q08mx")]
+position = Vector2(46, 115)
+
+[connection signal="disable_wall" from="Lever" to="." method="_on_lever_disable_wall"]
+[connection signal="disable_wall" from="Lever2" to="." method="_on_lever_2_disable_wall"]
+[connection signal="disable_wall" from="Lever3" to="." method="_on_lever_3_disable_wall"]
