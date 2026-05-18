@@ -260,10 +260,6 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(1045.9999, 176.00006)
 scale = Vector2(0.4, 0.4)
 
-[node name="portal" parent="." unique_id=1422304667 instance=ExtResource("34_a3kfm")]
-position = Vector2(1303, 438)
-NEXT_LEVEL = "uid://ccxcmb54vch6v"
-
 [node name="Witch" type="CharacterBody2D" parent="." unique_id=777649951]
 position = Vector2(381, 829.99994)
 scale = Vector2(0.5820958, 0.525565)
@@ -292,3 +288,7 @@ animation = &"Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard" unique_id=1002303281]
 position = Vector2(473, 699.5)
 shape = SubResource("RectangleShape2D_khcx2")
+
+[node name="portal" parent="." unique_id=1422304667 instance=ExtResource("34_a3kfm")]
+position = Vector2(1298, 447)
+NEXT_LEVEL = "uid://ccxcmb54vch6v"

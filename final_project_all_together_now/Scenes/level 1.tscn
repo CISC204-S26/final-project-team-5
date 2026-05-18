@@ -236,6 +236,6 @@ scale = Vector2(0.3, 0.3)
 stream = ExtResource("8_4ff0u")
 
 [node name="portal" parent="." unique_id=1422304667 instance=ExtResource("9_ayjtp")]
-position = Vector2(1439, 588)
+position = Vector2(1434, 575)
 scale = Vector2(0.8, 0.8)
 NEXT_LEVEL = "uid://cummrlhkf8awl"
