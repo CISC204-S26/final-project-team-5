@@ -85,7 +85,7 @@ position = Vector2(1143, 383.99997)
 scale = Vector2(0.82196975, 0.7055336)
 sprite_frames = SubResource("SpriteFrames_k0j48")
 animation = &"idle"
-frame_progress = 0.9284705
+frame_progress = 0.46325085
 script = ExtResource("7_0eujw")
 
 [node name="WITCH (coven)" type="Label" parent="witch idle" unique_id=406586594]
@@ -101,10 +101,10 @@ text = "COVEN"
 [node name="WITCH (coven)2" type="Label" parent="witch idle/WITCH (coven)" unique_id=308640005]
 modulate = Color(0.6666667, 0.59607846, 0.21960784, 1)
 layout_mode = 0
-offset_left = 64.880264
-offset_top = 467.73123
-offset_right = 387.88025
-offset_bottom = 932.7312
+offset_left = 64.47929
+offset_top = 467.73105
+offset_right = 387.47928
+offset_bottom = 932.731
 rotation = 1.5712248
 theme_override_fonts/font = ExtResource("7_aldwq")
 theme_override_font_sizes/font_size = 51
@@ -131,7 +131,7 @@ position = Vector2(325, 381.00003)
 scale = Vector2(0.8972222, 0.75701946)
 sprite_frames = SubResource("SpriteFrames_x3a70")
 animation = &"idle"
-frame_progress = 0.27990842
+frame_progress = 0.81468874
 script = ExtResource("15_0565a")
 
 [node name="WIZARD (cloak)" type="Label" parent="Wizard idle" unique_id=800023029]

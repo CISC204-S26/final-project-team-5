@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dmgf05dup5mc0"]
+
+[ext_resource type="Script" uid="uid://col2kxoewy0jj" path="res://lightning.gd" id="1_cep6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_888k8"]
+size = Vector2(12, 323)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mwoj2"]
+
+[node name="Lightning" type="Area2D" unique_id=890871769]
+script = ExtResource("1_cep6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=174925941]
+position = Vector2(204, 634)
+shape = SubResource("RectangleShape2D_888k8")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=761708736]
+position = Vector2(1, -9)
+scale = Vector2(-5.9127502, -301.65988)
+mesh = SubResource("QuadMesh_mwoj2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

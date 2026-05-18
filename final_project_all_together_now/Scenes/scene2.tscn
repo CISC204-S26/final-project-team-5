@@ -2,11 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_grqhd"]
 [ext_resource type="Script" uid="uid://diuck70avryjt" path="res://Scripts/path_follow_2d.gd" id="2_2tlwn"]
-[ext_resource type="Texture2D" uid="uid://w5lcekw5jblk" path="res://Images/cloud better.png" id="2_tgdfv"]
+[ext_resource type="Texture2D" uid="uid://ckdqd7tltg3p4" path="res://travelerwalkanim/npcwalk1.png" id="3_dl7kw"]
+[ext_resource type="Texture2D" uid="uid://duxtimc7deb0b" path="res://travelerwalkanim/npcwalk2.png" id="4_a3kfm"]
+[ext_resource type="Texture2D" uid="uid://cj117nawwbdjm" path="res://travelerwalkanim/npcwalk3.png" id="5_v162i"]
 [ext_resource type="Script" uid="uid://d08xmv50h3xqo" path="res://witch.gd" id="6_gu8jm"]
+[ext_resource type="Texture2D" uid="uid://bw3xmitby5gy6" path="res://travelerwalkanim/npcwalk4.png" id="6_jict5"]
 [ext_resource type="Texture2D" uid="uid://dxix3bwaxsjv5" path="res://Images/moss.jpg" id="6_rsg50"]
 [ext_resource type="PackedScene" path="res://Scenes/collectable.tscn" id="7_48edw"]
 [ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="7_mrk8n"]
+[ext_resource type="Texture2D" uid="uid://bym1jx0i1c0pf" path="res://travelerwalkanim/npcwalk5.png" id="7_qrup4"]
 [ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="8_ib7tp"]
 [ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="9_2spfv"]
 [ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="10_dl7kw"]
@@ -41,6 +45,29 @@ _data = {
 "points": PackedVector2Array(406.2839, 159.77457, 0, 0, 1889, 930, 0, 0, 0, 0, 1889, 930, 0, 0, 0, 0, 15, 928, 0, 0, 0, 0, 1889, 930)
 }
 point_count = 4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3ods"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dl7kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a3kfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v162i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jict5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qrup4")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48edw"]
 
@@ -180,11 +207,12 @@ progress = 3309.29
 rotates = false
 script = ExtResource("2_2tlwn")
 
-[node name="Cloud" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1811096375]
-position = Vector2(0.26941657, 84.53174)
+[node name="Traveler" type="AnimatedSprite2D" parent="Path2D/PathFollow2D" unique_id=1199617433]
+position = Vector2(0.26941797, 100.53174)
 rotation = 3.1415927
 scale = Vector2(0.5516667, 0.535)
-texture = ExtResource("2_tgdfv")
+sprite_frames = SubResource("SpriteFrames_f3ods")
+animation = &"Walk"
 
 [node name="Label" type="Label" parent="." unique_id=770666749]
 offset_left = 3.0
@@ -232,8 +260,8 @@ position = Vector2(1045.9999, 176.00006)
 scale = Vector2(0.4, 0.4)
 
 [node name="Witch" type="CharacterBody2D" parent="." unique_id=777649951]
-position = Vector2(380.99997, 796)
-scale = Vector2(0.7966349, 0.68391454)
+position = Vector2(381, 829.99994)
+scale = Vector2(0.5820958, 0.525565)
 script = ExtResource("6_gu8jm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch" unique_id=532592461]
@@ -245,8 +273,8 @@ position = Vector2(-25.75, 2)
 shape = SubResource("RectangleShape2D_owkvg")
 
 [node name="Wizard" type="CharacterBody2D" parent="." unique_id=577882203]
-position = Vector2(250, 284)
-scale = Vector2(0.9339277, 0.7291641)
+position = Vector2(249, 433)
+scale = Vector2(0.7042004, 0.55904096)
 script = ExtResource("18_8mcrk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wizard" unique_id=1368722677]

@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://cummrlhkf8awl"]
+
+[ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_h6i1l"]
+[ext_resource type="Script" uid="uid://bkbg1k5ta10o" path="res://GroundPathFollow.gd" id="2_fkw01"]
+[ext_resource type="Script" uid="uid://cupd0qgkviul2" path="res://evil_wizard.gd" id="2_rjlxa"]
+[ext_resource type="Texture2D" uid="uid://d1un8a88eax85" path="res://evilwizard/evilwiz1.png" id="3_fkw01"]
+[ext_resource type="Texture2D" uid="uid://dewvuwgqnphac" path="res://evilwizard/evilwiz2.png" id="4_kgisj"]
+[ext_resource type="Texture2D" uid="uid://ev82xs21xu2k" path="res://evilwizard/evilwiz3.png" id="5_auvmg"]
+[ext_resource type="Texture2D" uid="uid://bwtyn0ar18sa0" path="res://evilwizard/evilwiz4.png" id="6_mdb1m"]
+[ext_resource type="Texture2D" uid="uid://1w0kjntiohyp" path="res://evilwizard/evilwiz5.png" id="7_0rrwo"]
+[ext_resource type="Script" uid="uid://cxe5bw5nyg188" path="res://air_follow.gd" id="9_kgisj"]
+[ext_resource type="Texture2D" uid="uid://bxm03ao6vo4gg" path="res://witchidleanim/witchidl1.png" id="9_tn8ja"]
+[ext_resource type="Script" uid="uid://l8cp327hkjx1" path="res://final_battle_witch.gd" id="10_auvmg"]
+[ext_resource type="Texture2D" uid="uid://c7qxb18awp1a8" path="res://witchidleanim/witchidl2.png" id="10_f4cms"]
+[ext_resource type="Texture2D" uid="uid://dlu7of2gdm8yi" path="res://witchidleanim/witchidl3.png" id="11_kmaau"]
+[ext_resource type="PackedScene" uid="uid://dmgf05dup5mc0" path="res://lightning.tscn" id="11_mdb1m"]
+[ext_resource type="Texture2D" uid="uid://t6f7f6bxph51" path="res://witchidleanim/witchidl4.png" id="12_3wqfe"]
+[ext_resource type="Texture2D" uid="uid://br7yh3cc1udne" path="res://witchidleanim/witchidl5.png" id="13_5po3b"]
+[ext_resource type="Texture2D" uid="uid://rm8agyodbsnr" path="res://witchidleanim/witchidl6.png" id="14_3yhvd"]
+[ext_resource type="Texture2D" uid="uid://qshjw7t6ye6u" path="res://witchwalkanim/witchwalk1.png" id="15_3b8ju"]
+[ext_resource type="Texture2D" uid="uid://baoyc38nt32ut" path="res://witchwalkanim/witchwalk2.png" id="16_cp1qm"]
+[ext_resource type="Texture2D" uid="uid://d2wrdubx6iqgw" path="res://witchwalkanim/witchwalk3.png" id="17_332g0"]
+[ext_resource type="Texture2D" uid="uid://x6md16h83ann" path="res://witchwalkanim/witchwalk4.png" id="18_uekmt"]
+[ext_resource type="Texture2D" uid="uid://dny3fwrbb2m5i" path="res://witchwalkanim/witchwalk5.png" id="19_tjb2r"]
+[ext_resource type="Script" uid="uid://djthgwly38gag" path="res://final_battle_wizard.gd" id="21_fkw01"]
+[ext_resource type="Texture2D" uid="uid://bhugmbkyc1k2c" path="res://wizardidleanim/wizidl1.png" id="21_vgv2o"]
+[ext_resource type="Texture2D" uid="uid://b4i52h1uwwihj" path="res://wizardidleanim/wizidl2.png" id="22_uqfku"]
+[ext_resource type="Texture2D" uid="uid://c7makrkhf2aj1" path="res://wizardidleanim/wizidl3.png" id="23_auk5h"]
+[ext_resource type="Texture2D" uid="uid://0w6uvl6m758o" path="res://wizardidleanim/wizidl4.png" id="24_acjw2"]
+[ext_resource type="Texture2D" uid="uid://sdkgwk1s56uw" path="res://wizardidleanim/wizidl5.png" id="25_vbruw"]
+[ext_resource type="Texture2D" uid="uid://ciuw1m131nroi" path="res://wizardidleanim/wizidl6.png" id="26_kx1x7"]
+[ext_resource type="Texture2D" uid="uid://bc2qamwn24xms" path="res://wizardwalkanim/wizwalk1.png" id="27_j10u6"]
+[ext_resource type="Texture2D" uid="uid://d3m86k4j61xsb" path="res://wizardwalkanim/wizwalk2.png" id="28_deuw7"]
+[ext_resource type="Texture2D" uid="uid://kdaq5s5ij8kx" path="res://wizardwalkanim/wizwalk3.png" id="29_vdsdx"]
+[ext_resource type="Texture2D" uid="uid://1rvudc108h1e" path="res://wizardwalkanim/wizwalk4.png" id="30_htwvl"]
+[ext_resource type="Texture2D" uid="uid://3osdvipdksu3" path="res://wizardwalkanim/wizwalk5.png" id="31_vvbd0"]
+[ext_resource type="PackedScene" uid="uid://d274io01m6i42" path="res://fireball.tscn" id="33_fkw01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8mu"]
+size = Vector2(1920, 127)
+
+[sub_resource type="Curve2D" id="Curve2D_i548e"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1033, 910, 0, 0, 0, 0, 600, 908)
+}
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mln1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fkw01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kgisj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_auvmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mdb1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0rrwo")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l1rb"]
+size = Vector2(224, 277)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4q0r"]
+size = Vector2(208, 266)
+
+[sub_resource type="Curve2D" id="Curve2D_kgisj"]
+_data = {
+"points": PackedVector2Array(406.2839, 159.77457, 0, 0, 1889, 930, 0, 0, 0, 0, 1889, 930, 0, 0, 0, 0, 15, 928, 0, 0, 0, 0, 1889, 930)
+}
+point_count = 4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtpuv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_tn8ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f4cms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kmaau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3wqfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5po3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3yhvd")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3b8ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cp1qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_332g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uekmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tjb2r")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe25t"]
+size = Vector2(393.5, 462)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s80uh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_vgv2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uqfku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_auk5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_acjw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_vbruw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kx1x7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_j10u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_deuw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vdsdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_htwvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vvbd0")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t304"]
+size = Vector2(356, 443)
+
+[node name="Final Battle" type="Node2D" unique_id=959796196]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=38697215]
+position = Vector2(960, 542)
+texture = ExtResource("1_h6i1l")
+
+[node name="Area2D" type="StaticBody2D" parent="Background" unique_id=720300797]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Background/Area2D" unique_id=1614644362]
+position = Vector2(-1, 474.5)
+shape = SubResource("RectangleShape2D_ab8mu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=779213950]
+position = Vector2(942.99994, 533.00006)
+rotation = 3.1415925
+scale = Vector2(10216.809, -290.74307)
+
+[node name="GroundPath" type="Path2D" parent="." unique_id=225247613]
+position = Vector2(716, 53)
+curve = SubResource("Curve2D_i548e")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="GroundPath" unique_id=1226264030]
+position = Vector2(1033, 910)
+rotation = -3.1369739
+script = ExtResource("2_fkw01")
+
+[node name="EvilWizard" type="CharacterBody2D" parent="GroundPath/PathFollow2D" unique_id=995021586]
+position = Vector2(1616.1631, 905.2103)
+rotation = 3.121733
+script = ExtResource("2_rjlxa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GroundPath/PathFollow2D/EvilWizard" unique_id=1518873518]
+position = Vector2(1628, 806)
+scale = Vector2(0.79467654, 0.7578464)
+sprite_frames = SubResource("SpriteFrames_mln1k")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundPath/PathFollow2D/EvilWizard" unique_id=1121830363]
+position = Vector2(1621, 820)
+shape = SubResource("RectangleShape2D_7l1rb")
+
+[node name="Hitbox" type="Area2D" parent="GroundPath/PathFollow2D/EvilWizard" unique_id=867511409]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundPath/PathFollow2D/EvilWizard/Hitbox" unique_id=118182183]
+position = Vector2(1621, 822)
+shape = SubResource("RectangleShape2D_d4q0r")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1882513962 groups=["air_follow"]]
+position = Vector2(0, -456)
+curve = SubResource("Curve2D_kgisj")
+
+[node name="AirFollow" type="PathFollow2D" parent="Path2D" unique_id=716856768 groups=["air_follow"]]
+position = Vector2(1889.085, 930.0001)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("9_kgisj")
+
+[node name="final battle witch" type="CharacterBody2D" parent="." unique_id=1488576337]
+position = Vector2(137.99995, 830.99994)
+scale = Vector2(0.5820958, 0.525565)
+script = ExtResource("10_auvmg")
+lightning_scene = ExtResource("11_mdb1m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="final battle witch" unique_id=759912399]
+sprite_frames = SubResource("SpriteFrames_jtpuv")
+animation = &"Walk"
+
+[node name="LightningMuzzle" type="Marker2D" parent="final battle witch" unique_id=105068621]
+position = Vector2(121.97313, -85.62202)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="final battle witch" unique_id=707980943]
+position = Vector2(-25.75, 2)
+shape = SubResource("RectangleShape2D_qe25t")
+
+[node name="final battle Wizard" type="CharacterBody2D" parent="." unique_id=1024547747]
+position = Vector2(6, 434)
+scale = Vector2(0.7042004, 0.55904096)
+script = ExtResource("21_fkw01")
+fireball_scene = ExtResource("33_fkw01")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="final battle Wizard" unique_id=673349284]
+position = Vector2(477, 700)
+scale = Vector2(0.99999994, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_s80uh")
+animation = &"Walk"
+
+[node name="Muzzle" type="Marker2D" parent="final battle Wizard" unique_id=191060031]
+position = Vector2(614.8817, 601.0293)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="final battle Wizard" unique_id=1310214211]
+position = Vector2(473, 699.5)
+shape = SubResource("RectangleShape2D_7t304")
