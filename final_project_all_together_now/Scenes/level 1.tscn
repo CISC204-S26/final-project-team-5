@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c3sv6s6bfbrgf" path="res://Scenes/Lever.tscn" id="8_q08mx"]
 [ext_resource type="PackedScene" uid="uid://ddfes06mfr543" path="res://portal.tscn" id="9_ayjtp"]
 [ext_resource type="PackedScene" uid="uid://ce6l2o6hrex4h" path="res://wizard.tscn" id="9_q08mx"]
+[ext_resource type="AudioStream" uid="uid://gk5p32mc2a8x" path="res://Sounds/yodguard-warp-magic-3-382389.mp3" id="13_b8do0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auim0"]
 size = Vector2(1924.5, 70)
@@ -216,6 +217,9 @@ position = Vector2(41, 484)
 
 [node name="Lever3" parent="." unique_id=411960076 groups=["Player"] instance=ExtResource("8_q08mx")]
 position = Vector2(46, 115)
+
+[node name="Portal Sound" type="AudioStreamPlayer2D" parent="." unique_id=594990691]
+stream = ExtResource("13_b8do0")
 
 [connection signal="disable_wall" from="Lever" to="." method="_on_lever_disable_wall"]
 [connection signal="disable_wall" from="Lever" to="StaticBody2D" method="_on_lever_disable_wall"]

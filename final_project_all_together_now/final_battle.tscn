@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cummrlhkf8awl"]
 
+[ext_resource type="Script" uid="uid://mqtiu2bdg1ta" path="res://final_battle.gd" id="1_0rrwo"]
 [ext_resource type="Texture2D" uid="uid://dn0b82qci0fsb" path="res://Images/background.jpg" id="1_h6i1l"]
 [ext_resource type="Script" uid="uid://bkbg1k5ta10o" path="res://GroundPathFollow.gd" id="2_fkw01"]
 [ext_resource type="Script" uid="uid://cupd0qgkviul2" path="res://evil_wizard.gd" id="2_rjlxa"]
@@ -35,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://1rvudc108h1e" path="res://wizardwalkanim/wizwalk4.png" id="30_htwvl"]
 [ext_resource type="Texture2D" uid="uid://3osdvipdksu3" path="res://wizardwalkanim/wizwalk5.png" id="31_vvbd0"]
 [ext_resource type="PackedScene" uid="uid://d274io01m6i42" path="res://fireball.tscn" id="33_fkw01"]
+[ext_resource type="AudioStream" uid="uid://gk5p32mc2a8x" path="res://Sounds/yodguard-warp-magic-3-382389.mp3" id="36_mdb1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8mu"]
 size = Vector2(1920, 127)
@@ -179,6 +181,7 @@ animations = [{
 size = Vector2(356, 443)
 
 [node name="Final Battle" type="Node2D" unique_id=959796196]
+script = ExtResource("1_0rrwo")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=38697215]
 position = Vector2(960, 542)
@@ -271,3 +274,6 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final battle Wizard" unique_id=1310214211]
 position = Vector2(473, 699.5)
 shape = SubResource("RectangleShape2D_7t304")
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="." unique_id=1820179184]
+stream = ExtResource("36_mdb1m")

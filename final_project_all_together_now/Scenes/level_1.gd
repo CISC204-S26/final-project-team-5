@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready() -> void:
+	$"Portal Sound".play()
 func _on_lever_disable_wall() -> void:
 	$platform11.queue_free()
 

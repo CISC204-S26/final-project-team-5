@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d2wrdubx6iqgw" path="res://witchwalkanim/witchwalk3.png" id="10_hq7rm"]
 [ext_resource type="Texture2D" uid="uid://x6md16h83ann" path="res://witchwalkanim/witchwalk4.png" id="11_qgy3q"]
 [ext_resource type="Texture2D" uid="uid://dny3fwrbb2m5i" path="res://witchwalkanim/witchwalk5.png" id="12_pldbs"]
+[ext_resource type="AudioStream" uid="uid://byw8qymg5dymw" path="res://Sounds/driken5482-retro-jump-3-236683.mp3" id="13_ybqxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3b24"]
 size = Vector2(79.94806, 20)
@@ -88,3 +89,6 @@ animation = &"Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Witch" unique_id=1870455272]
 position = Vector2(-25.75, 2)
 shape = SubResource("RectangleShape2D_yoovl")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Witch" unique_id=1922965078]
+stream = ExtResource("13_ybqxs")

@@ -29,6 +29,7 @@ func _physics_process(delta):
 	#jump
 	if Input.is_key_pressed(KEY_W) and is_on_floor():
 		velocity.y = jump_force
+		$JumpSound.play()
 
 	move_and_slide()
 
