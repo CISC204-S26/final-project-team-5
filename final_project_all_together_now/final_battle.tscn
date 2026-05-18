@@ -41,9 +41,9 @@ size = Vector2(1920, 127)
 
 [sub_resource type="Curve2D" id="Curve2D_i548e"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1078, 898, 0, 0, 0, 0, -711, 882, 0, 0, 0, 0, 1074, 892)
+"points": PackedVector2Array(0, 0, 0, 0, 1078, 898, 0, 0, 0, 0, -711, 882, 0, 0, 0, 0, 1074, 892, 0, 0, 0, 0, 181, 883)
 }
-point_count = 3
+point_count = 4
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mln1k"]
 animations = [{

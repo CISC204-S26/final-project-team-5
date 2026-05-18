@@ -13,9 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://x6md16h83ann" path="res://witchwalkanim/witchwalk4.png" id="11_qgy3q"]
 [ext_resource type="Texture2D" uid="uid://dny3fwrbb2m5i" path="res://witchwalkanim/witchwalk5.png" id="12_pldbs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3b24"]
-size = Vector2(79.94806, 20)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_30khj"]
 animations = [{
 "frames": [{
@@ -66,16 +63,6 @@ animations = [{
 size = Vector2(393.5, 462)
 
 [node name="Witch" type="Node2D" unique_id=1613664162]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1334052429]
-rotation = 3.1415925
-scale = Vector2(74.70275, 413.47775)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=990009626]
-position = Vector2(-16.97394, -2.3169324)
-rotation = 3.1415925
-scale = Vector2(0.5670474, 0.008126195)
-shape = SubResource("RectangleShape2D_o3b24")
 
 [node name="Witch" type="CharacterBody2D" parent="." unique_id=9504726 groups=["Player"]]
 position = Vector2(382, 690)
