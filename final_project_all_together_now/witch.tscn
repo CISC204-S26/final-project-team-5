@@ -77,7 +77,7 @@ rotation = 3.1415925
 scale = Vector2(0.5670474, 0.008126195)
 shape = SubResource("RectangleShape2D_o3b24")
 
-[node name="Witch" type="CharacterBody2D" parent="." unique_id=9504726]
+[node name="Witch" type="CharacterBody2D" parent="." unique_id=9504726 groups=["Player"]]
 position = Vector2(382, 690)
 script = ExtResource("1_8u5wv")
 

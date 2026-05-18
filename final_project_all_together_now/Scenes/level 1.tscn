@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b78cjo0j61lk1" path="res://Images/lever_2-removebg-preview.png" id="6_auim0"]
 [ext_resource type="Script" uid="uid://ccxmcdjclnqw4" path="res://Scenes/lever.gd" id="7_bex1k"]
 [ext_resource type="AudioStream" uid="uid://b80hdprqf6lbk" path="res://Sounds/freesound_community-rattle1-107616.mp3" id="8_4ff0u"]
+[ext_resource type="PackedScene" uid="uid://ddfes06mfr543" path="res://portal.tscn" id="9_ayjtp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auim0"]
 size = Vector2(1924.5, 70)
@@ -233,3 +234,8 @@ position = Vector2(34.999996, 125)
 rotation = -3.1415925
 scale = Vector2(0.3, 0.3)
 stream = ExtResource("8_4ff0u")
+
+[node name="portal" parent="." unique_id=1422304667 instance=ExtResource("9_ayjtp")]
+position = Vector2(1439, 588)
+scale = Vector2(0.8, 0.8)
+NEXT_LEVEL = "uid://cummrlhkf8awl"

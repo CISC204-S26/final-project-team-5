@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://kdaq5s5ij8kx" path="res://wizardwalkanim/wizwalk3.png" id="27_j26ou"]
 [ext_resource type="Texture2D" uid="uid://1rvudc108h1e" path="res://wizardwalkanim/wizwalk4.png" id="28_8suxd"]
 [ext_resource type="Texture2D" uid="uid://3osdvipdksu3" path="res://wizardwalkanim/wizwalk5.png" id="29_w28be"]
-[ext_resource type="Script" uid="uid://bekll25j23o4x" path="res://Scenes/portal.gd" id="34_a3kfm"]
+[ext_resource type="PackedScene" uid="uid://ddfes06mfr543" path="res://portal.tscn" id="34_a3kfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48edw"]
 size = Vector2(1920, 127)
@@ -180,10 +180,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khcx2"]
 size = Vector2(356, 443)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v162i"]
-radius = 71.0
-height = 296.0
-
 [node name="Node2D" type="Node2D" unique_id=1920271277]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=413217497]
@@ -264,13 +260,15 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(1045.9999, 176.00006)
 scale = Vector2(0.4, 0.4)
 
+[node name="portal" parent="." unique_id=1422304667 instance=ExtResource("34_a3kfm")]
+position = Vector2(1303, 438)
+NEXT_LEVEL = "uid://ccxcmb54vch6v"
+
 [node name="Witch" type="CharacterBody2D" parent="." unique_id=777649951]
 position = Vector2(381, 829.99994)
 scale = Vector2(0.5820958, 0.525565)
 script = ExtResource("6_gu8jm")
 speed = 450
-jump_force = null
-gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch" unique_id=532592461]
 sprite_frames = SubResource("SpriteFrames_m183y")
@@ -294,13 +292,3 @@ animation = &"Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard" unique_id=1002303281]
 position = Vector2(473, 699.5)
 shape = SubResource("RectangleShape2D_khcx2")
-
-[node name="portal" type="Area2D" parent="." unique_id=638503798]
-position = Vector2(1847, 763)
-script = ExtResource("34_a3kfm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="portal" unique_id=1409373815]
-position = Vector2(-2, 32)
-shape = SubResource("CapsuleShape2D_v162i")
-
-[connection signal="body_entered" from="portal" to="Witch" method="_on_portal_body_entered"]
