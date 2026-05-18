@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://b78cjo0j61lk1" path="res://Images/lever_2-removebg-preview.png" id="2_eno02"]
 [ext_resource type="AudioStream" uid="uid://b80hdprqf6lbk" path="res://Sounds/freesound_community-rattle1-107616.mp3" id="3_eno02"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vybex"]
-size = Vector2(93, 105)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhniu"]
 radius = 113.110565
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vybex"]
+size = Vector2(93, 105)
 
 [node name="Lever" type="StaticBody2D" unique_id=1841538704]
 script = ExtResource("1_0so5j")
@@ -19,15 +19,15 @@ scale = Vector2(0.278, 0.27)
 texture = ExtResource("2_eno02")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038060351]
-position = Vector2(-12.5, -10.5)
-shape = SubResource("RectangleShape2D_vybex")
-
 [node name="InteractRadius" type="Area2D" parent="." unique_id=403224657]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractRadius" unique_id=110510644]
 position = Vector2(-17, -10)
 shape = SubResource("CircleShape2D_mhniu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038060351]
+position = Vector2(-12.5, -10.5)
+shape = SubResource("RectangleShape2D_vybex")
 
 [node name="LeverSound" type="AudioStreamPlayer2D" parent="." unique_id=1308793494]
 stream = ExtResource("3_eno02")

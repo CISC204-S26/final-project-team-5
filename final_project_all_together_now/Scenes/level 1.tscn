@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://053r0n56v77n" path="res://Images/level 1 again again.jpg" id="1_jer6a"]
 [ext_resource type="Texture2D" uid="uid://dystnh2wdi5x1" path="res://Images/rock.jpg" id="4_f66m2"]
 [ext_resource type="PackedScene" uid="uid://dyb0q0r7837jj" path="res://Scenes/collectable.tscn" id="5_auim0"]
+[ext_resource type="Script" uid="uid://bwocgdhdtunvg" path="res://Scenes/static_body_2d_2.gd" id="5_mnuql"]
+[ext_resource type="Script" uid="uid://cba8t4iygvbsw" path="res://Scenes/static_body_2d.gd" id="5_q08mx"]
+[ext_resource type="Script" uid="uid://b4dylv4wry3w" path="res://Scenes/static_body_2d_3.gd" id="6_06qb0"]
 [ext_resource type="AudioStream" uid="uid://b80hdprqf6lbk" path="res://Sounds/freesound_community-rattle1-107616.mp3" id="8_4ff0u"]
 [ext_resource type="PackedScene" uid="uid://bd64w4jh7yebf" path="res://witch.tscn" id="8_ayjtp"]
 [ext_resource type="PackedScene" uid="uid://c3sv6s6bfbrgf" path="res://Scenes/Lever.tscn" id="8_q08mx"]
@@ -64,16 +67,18 @@ texture = ExtResource("4_f66m2")
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
-[node name="platform3" type="MeshInstance2D" parent="." unique_id=490936599]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=258831151]
 position = Vector2(1691.9998, 424)
-rotation = 4.7149854
-scale = Vector2(282.12494, 107.25)
+rotation = -1.5682
+scale = Vector2(282.12494, 107.24999)
+script = ExtResource("5_mnuql")
+
+[node name="platform3" type="MeshInstance2D" parent="StaticBody2D2" unique_id=490936599]
+scale = Vector2(1, 1.0000001)
 mesh = SubResource("QuadMesh_bex1k")
 texture = ExtResource("4_f66m2")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="platform3" unique_id=258831151]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3/StaticBody2D" unique_id=993363190]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=993363190]
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
@@ -142,16 +147,18 @@ texture = ExtResource("4_f66m2")
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
-[node name="platform9" type="MeshInstance2D" parent="." unique_id=465988997]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1059869166]
 position = Vector2(454.99997, 868)
-rotation = 7.8438487
-scale = Vector2(282.12494, 107.25)
+rotation = 1.5606633
+scale = Vector2(282.12497, 107.25001)
+script = ExtResource("6_06qb0")
+
+[node name="platform9" type="MeshInstance2D" parent="StaticBody2D3" unique_id=465988997]
+scale = Vector2(0.99999994, 1)
 mesh = SubResource("QuadMesh_bex1k")
 texture = ExtResource("4_f66m2")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="platform9" unique_id=1059869166]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform9/StaticBody2D" unique_id=1053815401]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1053815401]
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
@@ -168,16 +175,17 @@ texture = ExtResource("4_f66m2")
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
-[node name="platform11" type="MeshInstance2D" parent="." unique_id=1926208650]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=195296364]
 position = Vector2(1685, 137)
-rotation = 7.8583326
+rotation = 1.5751473
 scale = Vector2(282.12494, 107.25)
+script = ExtResource("5_q08mx")
+
+[node name="platform11" type="MeshInstance2D" parent="StaticBody2D" unique_id=1926208650]
 mesh = SubResource("QuadMesh_bex1k")
 texture = ExtResource("4_f66m2")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="platform11" unique_id=195296364]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform11/StaticBody2D" unique_id=198514639]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=198514639]
 position = Vector2(0, -0.0046625137)
 shape = SubResource("RectangleShape2D_4ff0u")
 
@@ -197,18 +205,21 @@ position = Vector2(168.00002, 597)
 scale = Vector2(0.45, 0.45)
 
 [node name="Wizard" parent="." unique_id=1757818075 instance=ExtResource("9_q08mx")]
-position = Vector2(1619, -186)
+position = Vector2(19, 232)
 scale = Vector2(0.45, 0.45)
 
-[node name="Lever" parent="." unique_id=1841538704 instance=ExtResource("8_q08mx")]
+[node name="Lever" parent="." unique_id=1841538704 groups=["Player"] instance=ExtResource("8_q08mx")]
 position = Vector2(46, 881)
 
-[node name="Lever2" parent="." unique_id=38143319 instance=ExtResource("8_q08mx")]
+[node name="Lever2" parent="." unique_id=38143319 groups=["Player"] instance=ExtResource("8_q08mx")]
 position = Vector2(41, 484)
 
-[node name="Lever3" parent="." unique_id=411960076 instance=ExtResource("8_q08mx")]
+[node name="Lever3" parent="." unique_id=411960076 groups=["Player"] instance=ExtResource("8_q08mx")]
 position = Vector2(46, 115)
 
 [connection signal="disable_wall" from="Lever" to="." method="_on_lever_disable_wall"]
+[connection signal="disable_wall" from="Lever" to="StaticBody2D" method="_on_lever_disable_wall"]
 [connection signal="disable_wall" from="Lever2" to="." method="_on_lever_2_disable_wall"]
+[connection signal="disable_wall" from="Lever2" to="StaticBody2D3" method="_on_lever_2_disable_wall"]
 [connection signal="disable_wall" from="Lever3" to="." method="_on_lever_3_disable_wall"]
+[connection signal="disable_wall" from="Lever3" to="StaticBody2D2" method="_on_lever_3_disable_wall"]
