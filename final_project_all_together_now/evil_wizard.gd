@@ -44,21 +44,24 @@ func take_fire_damage():
 # (move to air)
 func start_phase_two():
 	phase = 2
-
 	print("Transitioning to Phase 2")
 
-	# Safety check
 	if air_follow == null:
 		print("ERROR: AirFollow not found (check group 'air_follow')")
 		return
 
-	
+	# Preserve current world position before reparenting
+	var saved_position = position
+
+	# Remove from ground path
 	if get_parent():
 		get_parent().remove_child(self)
 
+	# Add to air path
 	air_follow.add_child(self)
 
-	global_position = air_follow
+	# Restore position AFTER reparenting
+	position = saved_position
 
 
 # lightning (phase 2)
