@@ -80,9 +80,6 @@ shape = SubResource("RectangleShape2D_o3b24")
 [node name="Witch" type="CharacterBody2D" parent="." unique_id=9504726 groups=["Player"]]
 position = Vector2(382, 690)
 script = ExtResource("1_8u5wv")
-speed = null
-jump_force = null
-gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Witch" unique_id=384445447]
 sprite_frames = SubResource("SpriteFrames_30khj")
