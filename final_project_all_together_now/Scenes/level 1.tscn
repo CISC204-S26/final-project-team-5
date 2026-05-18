@@ -205,7 +205,7 @@ position = Vector2(168.00002, 597)
 scale = Vector2(0.45, 0.45)
 
 [node name="Wizard" parent="." unique_id=1757818075 instance=ExtResource("9_q08mx")]
-position = Vector2(19, 232)
+position = Vector2(1637, -177)
 scale = Vector2(0.45, 0.45)
 
 [node name="Lever" parent="." unique_id=1841538704 groups=["Player"] instance=ExtResource("8_q08mx")]
