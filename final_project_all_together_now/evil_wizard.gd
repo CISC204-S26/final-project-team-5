@@ -58,7 +58,7 @@ func start_phase_two():
 
 	air_follow.add_child(self)
 
-	global_position = Vector2.ZERO
+	global_position = air_follow
 
 
 # lightning (phase 2)

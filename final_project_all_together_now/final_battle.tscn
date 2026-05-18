@@ -39,11 +39,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8mu"]
 size = Vector2(1920, 127)
 
+[sub_resource type="QuadMesh" id="QuadMesh_auvmg"]
+
 [sub_resource type="Curve2D" id="Curve2D_i548e"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1078, 898, 0, 0, 0, 0, -711, 882, 0, 0, 0, 0, 1074, 892)
+"points": PackedVector2Array(0, 0, 0, 0, 1078, 898, 0, 0, 0, 0, 217, 897)
 }
-point_count = 3
+point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mln1k"]
 animations = [{
@@ -76,9 +78,9 @@ size = Vector2(208, 266)
 
 [sub_resource type="Curve2D" id="Curve2D_kgisj"]
 _data = {
-"points": PackedVector2Array(406.2839, 159.77457, 0, 0, 1889, 930, 0, 0, 0, 0, 1889, 930, 0, 0, 0, 0, 15, 928, 0, 0, 0, 0, 1889, 930)
+"points": PackedVector2Array(0, 0, 0, 0, 1889, 930, 0, 0, 0, 0, 190, 909, 0, 0, 0, 0, 1889, 930)
 }
-point_count = 4
+point_count = 3
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jtpuv"]
 animations = [{
@@ -190,6 +192,12 @@ texture = ExtResource("1_h6i1l")
 position = Vector2(-1, 474.5)
 shape = SubResource("RectangleShape2D_ab8mu")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=667008859]
+position = Vector2(229.00002, 156.00002)
+rotation = 3.1415925
+scale = Vector2(416.53076, -285.60492)
+mesh = SubResource("QuadMesh_auvmg")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=779213950]
 position = Vector2(942.99994, 533.00006)
 rotation = 3.1415925
@@ -201,7 +209,7 @@ curve = SubResource("Curve2D_i548e")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="GroundPath" unique_id=1226264030]
 position = Vector2(1078, 898)
-rotation = -3.1326494
+rotation = -3.1404312
 script = ExtResource("2_fkw01")
 
 [node name="EvilWizard" type="CharacterBody2D" parent="GroundPath/PathFollow2D" unique_id=995021586]
@@ -225,12 +233,13 @@ shape = SubResource("RectangleShape2D_7l1rb")
 position = Vector2(1621, 822)
 shape = SubResource("RectangleShape2D_d4q0r")
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1882513962 groups=["air_follow"]]
+[node name="AirPath" type="Path2D" parent="." unique_id=1882513962 groups=["air_follow"]]
 position = Vector2(0, -456)
 curve = SubResource("Curve2D_kgisj")
 
-[node name="AirFollow" type="PathFollow2D" parent="Path2D" unique_id=716856768 groups=["air_follow"]]
-position = Vector2(1889.085, 930.0001)
+[node name="AirFollow" type="PathFollow2D" parent="AirPath" unique_id=716856768 groups=["air_follow"]]
+position = Vector2(1889, 930)
+rotation = -3.1292331
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("9_kgisj")
 
