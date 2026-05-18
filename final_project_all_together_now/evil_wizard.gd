@@ -6,7 +6,7 @@ var phase := 1
 
 var previous_x := 0.0
 
-# SAFE references (no fragile node paths)
+
 @onready var ground_follow = get_parent()
 @onready var air_follow = get_tree().get_first_node_in_group("air_follow")
 
@@ -29,7 +29,7 @@ func _process(delta):
 		$AnimatedSprite2D.play("Walk")
 
 
-# ---------------- FIRE DAMAGE (PHASE 1 ONLY) ----------------
+# fire (phase 1)
 func take_fire_damage():
 	if phase != 1:
 		return
@@ -41,7 +41,7 @@ func take_fire_damage():
 		start_phase_two()
 
 
-# ---------------- PHASE TRANSITION ----------------
+# (move to air)
 func start_phase_two():
 	phase = 2
 
@@ -52,7 +52,7 @@ func start_phase_two():
 		print("ERROR: AirFollow not found (check group 'air_follow')")
 		return
 
-	# Move boss from ground path to air path
+	
 	if get_parent():
 		get_parent().remove_child(self)
 
@@ -61,7 +61,7 @@ func start_phase_two():
 	global_position = Vector2.ZERO
 
 
-# ---------------- LIGHTNING DAMAGE (PHASE 2 ONLY) ----------------
+# lightning (phase 2)
 func take_lightning_damage():
 	if phase != 2:
 		return
@@ -73,13 +73,13 @@ func take_lightning_damage():
 		die()
 
 
-# ---------------- VISUAL FEEDBACK ----------------
+# damage
 func flash_red():
 	$AnimatedSprite2D.modulate = Color.RED
 	await get_tree().create_timer(0.15).timeout
 	$AnimatedSprite2D.modulate = Color.WHITE
 
 
-# ---------------- DEATH ----------------
+# death
 func die():
 	queue_free()
