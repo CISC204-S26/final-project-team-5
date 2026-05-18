@@ -271,3 +271,11 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final battle Wizard" unique_id=1310214211]
 position = Vector2(473, 699.5)
 shape = SubResource("RectangleShape2D_7t304")
+
+[node name="Label" type="Label" parent="." unique_id=1533256695]
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 1197.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 35
+text = "Welcome to the Boss Battle: Wizard click S and Witch click down arrow"
